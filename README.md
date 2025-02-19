@@ -91,5 +91,6 @@ scoop config aria2-min-split-size 4M
 
 |                        App                        | Auto-Update ? | Original ? |
 | :-----------------------------------------------: | :-----------: | :--------: |
+|           [dbgate](https://dbgate.org)            |       ✓       |     ✓      |
 | [lrcget](https://github.com/tranxuanthang/lrcget) |       ✓       |     ✓      |
 |   [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |     ✓      |
