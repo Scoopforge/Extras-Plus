@@ -89,9 +89,10 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
-|                        App                        | Auto-Update ? | Original ? |
-| :-----------------------------------------------: | :-----------: | :--------: |
-|           [dbgate](https://dbgate.org)            |       ✓       |     ✓      |
-| [lrcget](https://github.com/tranxuanthang/lrcget) |       ✓       |     ✓      |
-|          [readest](https://readest.com)           |       ✓       |     ✓      |
-|   [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |     ✓      |
+|                                     App                                      | Auto-Update ? | Original ? |
+| :--------------------------------------------------------------------------: | :-----------: | :--------: |
+|                         [dbgate](https://dbgate.org)                         |       ✓       |     ✓      |
+|              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
+| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
+|                        [readest](https://readest.com)                        |       ✓       |     ✓      |
+|                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
