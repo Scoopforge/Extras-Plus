@@ -89,5 +89,6 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
-|  App  | Auto-Update ? | Original ? |
-| :---: | :-----------: | :--------: |
+|                App                 | Auto-Update ? | Original ? |
+| :--------------------------------: | :-----------: | :--------: |
+| [aigcpanel](https://aigcpanel.com) |       ✓       |     ✓      |
