@@ -89,6 +89,6 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
-|                App                 | Auto-Update ? | Original ? |
-| :--------------------------------: | :-----------: | :--------: |
-| [aigcpanel](https://aigcpanel.com) |       ✓       |     ✓      |
+|                     App                      | Auto-Update ? | Original ? |
+| :------------------------------------------: | :-----------: | :--------: |
+| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |     ✓      |
