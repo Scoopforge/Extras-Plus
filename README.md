@@ -91,7 +91,8 @@ scoop config aria2-min-split-size 4M
 
 |                                     App                                      | Auto-Update ? | Original ? |
 | :--------------------------------------------------------------------------: | :-----------: | :--------: |
-|                         [dbgate](https://dbgate.org)                         |       ✓       |     ✓      |
+|                     [corretto8-jdk](https://dbgate.org)                      |       ✓       |     ✓      |
+|                  [dbgate](https://aws.amazon.com/corretto/)                  |       ✓       |     ✓      |
 |                       [doxygen](http://www.doxygen.nl)                       |       ✓       |     ✓      |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
