@@ -95,6 +95,7 @@ scoop config aria2-min-split-size 4M
 |                       [doxygen](http://www.doxygen.nl)                       |       ✓       |     ✓      |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
+|                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
 |                        [readest](https://readest.com)                        |       ✓       |     ✓      |
 |                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
 |                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |     ✓      |
