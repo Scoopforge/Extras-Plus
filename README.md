@@ -89,6 +89,7 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
-|                     App                      | Auto-Update ? | Original ? |
-| :------------------------------------------: | :-----------: | :--------: |
-| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |     ✓      |
+|                        App                        | Auto-Update ? | Original ? |
+| :-----------------------------------------------: | :-----------: | :--------: |
+| [lrcget](https://github.com/tranxuanthang/lrcget) |       ✓       |     ✓      |
+|   [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |     ✓      |
