@@ -98,5 +98,6 @@ scoop config aria2-min-split-size 4M
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
 |                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
 |                        [readest](https://readest.com)                        |       ✓       |     ✓      |
+|                      [veracrypt](https://veracrypt.fr)                       |       ✓       |     ✓      |
 |                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
 |                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |     ✓      |
