@@ -104,8 +104,10 @@ scoop config aria2-min-split-size 4M
 |    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |     ✓      |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
+|               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |     ✓      |
 |                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
 |                        [readest](https://readest.com)                        |       ✓       |     ✓      |
+|                      [texlive](https://tug.org/texlive)                      |       ✓       |     ✓      |
 |                      [veracrypt](https://veracrypt.fr)                       |       ✓       |     ✓      |
 |                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
 |                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |     ✓      |
