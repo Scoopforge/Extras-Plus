@@ -89,15 +89,19 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
+### Cross-Platform
+
 |                                     App                                      | Auto-Update ? | Original ? |
 | :--------------------------------------------------------------------------: | :-----------: | :--------: |
 |          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |     ✓      |
 |                       [buzz](https://buzzcaptions.com)                       |       ✓       |     ✓      |
+|                       [chatbox](https://chatboxai.app)                       |       ✓       |     ✓      |
+|                    [cherry-studio](https://cherry-ai.com)                    |       ✓       |     ✓      |
 |               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |     ✓      |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |     ✓      |
-|                       [doxygen](http://www.doxygen.nl)                       |       ✓       |     ✓      |
+|                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |     ✓      |
 |              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |     ✓      |
-|                 [file-converter](https://file-converter.org)                 |       ✓       |     ✓      |
+|    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |     ✓      |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
 |                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
@@ -105,3 +109,9 @@ scoop config aria2-min-split-size 4M
 |                      [veracrypt](https://veracrypt.fr)                       |       ✓       |     ✓      |
 |                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
 |                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |     ✓      |
+
+### Win-Only
+
+|                     App                      | Auto-Update ? | Original ? |
+| :------------------------------------------: | :-----------: | :--------: |
+| [file-converter](https://file-converter.org) |       ✓       |     ✓      |
