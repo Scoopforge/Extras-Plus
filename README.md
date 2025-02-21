@@ -96,6 +96,7 @@ scoop config aria2-min-split-size 4M
 |               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |     ✓      |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |     ✓      |
 |                       [doxygen](http://www.doxygen.nl)                       |       ✓       |     ✓      |
+|              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |     ✓      |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
 |                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
