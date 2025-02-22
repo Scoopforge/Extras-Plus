@@ -69,7 +69,7 @@ scoop bucket add Extras-plus https://github.com/Scoopforge/Extras-Plus
 scoop update
 ```
 
-### 🚀 Step 4: Install CLI
+### 🚀 Step 4: Install App
 
 ```powershell
 scoop install <app_name>
