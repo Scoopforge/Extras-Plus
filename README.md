@@ -108,6 +108,7 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                     App                      | Auto-Update ? | Original ? |
-| :------------------------------------------: | :-----------: | :--------: |
-| [file-converter](https://file-converter.org) |       ✓       |     ✓      |
+|                              App                              | Auto-Update ? | Original ? |
+| :-----------------------------------------------------------: | :-----------: | :--------: |
+|         [file-converter](https://file-converter.org)          |       ✓       |     ✓      |
+| [wisecare365](https://www.wisecleaner.com/wise-care-365.html) |       ✓       |     ✓      |
