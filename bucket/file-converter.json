@@ -1,7 +1,7 @@
 {
-    "homepage": "https://file-converter.org/",
     "version": "2.0.2",
     "description": "Various file converter and compressor",
+    "homepage": "https://file-converter.org/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
