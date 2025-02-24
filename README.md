@@ -87,6 +87,7 @@ scoop config aria2-min-split-size 4M
 
 |                                     App                                      | Auto-Update ? | Original ? |
 | :--------------------------------------------------------------------------: | :-----------: | :--------: |
+|               [alexandria](https://github.com/btpf/Alexandria)               |       ✓       |     ✓      |
 |          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |     ✓      |
 |                       [buzz](https://buzzcaptions.com)                       |       ✓       |     ✓      |
 |                       [chatbox](https://chatboxai.app)                       |       ✓       |     ✓      |
