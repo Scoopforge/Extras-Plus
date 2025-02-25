@@ -96,6 +96,7 @@ scoop config aria2-min-split-size 4M
 |                         [dbgate](https://dbgate.org)                         |       ✓       |
 |                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |
 |              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |
+|          [filecentipede](https://github.com/filecxx/FileCentipede)           |       ✓       |
 |    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |
