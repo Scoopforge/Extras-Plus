@@ -85,34 +85,35 @@ scoop config aria2-min-split-size 4M
 
 ### Cross-Platform
 
-|                                     App                                      | Auto-Update ? | Original ? |
-| :--------------------------------------------------------------------------: | :-----------: | :--------: |
-|               [alexandria](https://github.com/btpf/Alexandria)               |       ✓       |     ✓      |
-|          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |     ✓      |
-|                       [buzz](https://buzzcaptions.com)                       |       ✓       |     ✓      |
-|                       [chatbox](https://chatboxai.app)                       |       ✓       |     ✓      |
-|                    [cherry-studio](https://cherry-ai.com)                    |       ✓       |     ✓      |
-|               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |     ✓      |
-|                         [dbgate](https://dbgate.org)                         |       ✓       |     ✓      |
-|                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |     ✓      |
-|              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |     ✓      |
-|    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |     ✓      |
-|              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |     ✓      |
-| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |     ✓      |
-|                 [mendeley-desktop](http://www.mendeley.com/)                 |       ✓       |     ✓      |
-|               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |     ✓      |
-|                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |     ✓      |
-|                        [readest](https://readest.com)                        |       ✓       |     ✓      |
-|                      [texlive](https://tug.org/texlive)                      |       ✓       |     ✓      |
-|                      [veracrypt](https://veracrypt.fr)                       |       ✓       |     ✓      |
-|                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |     ✓      |
-|                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |     ✓      |
+|                                     App                                      | Auto-Update ? |
+| :--------------------------------------------------------------------------: | :-----------: |
+|               [alexandria](https://github.com/btpf/Alexandria)               |       ✓       |
+|          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |
+|                       [buzz](https://buzzcaptions.com)                       |       ✓       |
+|                       [chatbox](https://chatboxai.app)                       |       ✓       |
+|                    [cherry-studio](https://cherry-ai.com)                    |       ✓       |
+|               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |
+|                         [dbgate](https://dbgate.org)                         |       ✓       |
+|                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |
+|              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |
+|    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |
+|              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |
+| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |
+|                 [mendeley-desktop](http://www.mendeley.com/)                 |       ✓       |
+|               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |
+|                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |
+|                        [readest](https://readest.com)                        |       ✓       |
+|               [scihubeva](https://github.com/leovan/SciHubEVA)               |       ✓       |
+|                      [texlive](https://tug.org/texlive)                      |       ✓       |
+|                      [veracrypt](https://veracrypt.fr)                       |       ✓       |
+|                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |
+|                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |
 
 ### Win-Only
 
-|                                        App                                        | Auto-Update ? | Original ? |
-| :-------------------------------------------------------------------------------: | :-----------: | :--------: |
-|      [auto-night-mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |     ✓      |
-|                   [file-converter](https://file-converter.org)                    |       ✓       |     ✓      |
-|           [wisecare365](https://www.wisecleaner.com/wise-care-365.html)           |       ✓       |     ✓      |
-| [vmware-workstation-pro](https://www.vmware.com/products/desktop-hypervisor.html) |       ✓       |     ✓      |
+|                                        App                                        | Auto-Update ? |
+| :-------------------------------------------------------------------------------: | :-----------: |
+|      [auto-night-mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |
+|                   [file-converter](https://file-converter.org)                    |       ✓       |
+|           [wisecare365](https://www.wisecleaner.com/wise-care-365.html)           |       ✓       |
+| [vmware-workstation-pro](https://www.vmware.com/products/desktop-hypervisor.html) |       ✓       |
