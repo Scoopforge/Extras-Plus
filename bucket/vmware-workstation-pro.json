@@ -1,10 +1,10 @@
 {
     "version": "17.6.2-24409262",
     "description": "Application for creating and running virtual machines on your computer.",
-    "homepage": "https://www.vmware.com/products/desktop-hypervisor.html",
+    "homepage": "https://vmware.com/products/desktop-hypervisor.html",
     "license": {
         "identifier": "Proprietary",
-        "url": "https://www.broadcom.com/company/legal/terms-of-use"
+        "url": "https://broadcom.com/company/legal/terms-of-use"
     },
     "suggest": {
         "vcredist": "extras/vcredist"
