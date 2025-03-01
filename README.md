@@ -91,7 +91,6 @@ scoop config aria2-min-split-size 4M
 |          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |
 |                       [buzz](https://buzzcaptions.com)                       |       ✓       |
 |                       [chatbox](https://chatboxai.app)                       |       ✓       |
-|                    [cherry-studio](https://cherry-ai.com)                    |       ✓       |
 |               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |
 |                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |
