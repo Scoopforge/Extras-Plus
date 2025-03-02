@@ -106,6 +106,7 @@ scoop config aria2-min-split-size 4M
 |                        [readest](https://readest.com)                        |       ✓       |
 |               [scihubeva](https://github.com/leovan/SciHubEVA)               |       ✓       |
 |                      [texlive](https://tug.org/texlive)                      |       ✓       |
+|                [typship](https://github.com/sjfhsjfh/typship)                |       ✓       |
 |                      [veracrypt](https://veracrypt.fr)                       |       ✓       |
 |                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |
 |                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |
