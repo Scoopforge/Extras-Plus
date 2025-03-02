@@ -92,6 +92,7 @@ scoop config aria2-min-split-size 4M
 |                       [buzz](https://buzzcaptions.com)                       |       ✓       |
 |                       [chatbox](https://chatboxai.app)                       |       ✓       |
 |               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |
+|                      [cytoscape](https://cytoscape.org)                      |       ✓       |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |
 |                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |
 |              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |
