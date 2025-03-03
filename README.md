@@ -94,14 +94,14 @@ scoop config aria2-min-split-size 4M
 |               [corretto8-jdk](https://aws.amazon.com/corretto)               |       ✓       |
 |                      [cytoscape](https://cytoscape.org)                      |       ✓       |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |
-|                     [doxygen-gui](http://www.doxygen.nl)                     |       ✓       |
+|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |
 |              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |
 |          [filecentipede](https://github.com/filecxx/FileCentipede)           |       ✓       |
 |    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |
 |                   [kindle](https://amazon.com/kindleapps)                    |       ✓       |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |
-|                 [mendeley-desktop](http://www.mendeley.com/)                 |       ✓       |
+|                   [mendeley-desktop](http://mendeley.com/)                   |       ✓       |
 |               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |
 |                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |
 |                        [readest](https://readest.com)                        |       ✓       |
@@ -114,9 +114,9 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                                        App                                        | Auto-Update ? |
-| :-------------------------------------------------------------------------------: | :-----------: |
-|      [auto-night-mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |
-|                   [file-converter](https://file-converter.org)                    |       ✓       |
-|           [wisecare365](https://www.wisecleaner.com/wise-care-365.html)           |       ✓       |
-| [vmware-workstation-pro](https://www.vmware.com/products/desktop-hypervisor.html) |       ✓       |
+|                                      App                                      | Auto-Update ? |
+| :---------------------------------------------------------------------------: | :-----------: |
+|    [auto-night-mode](https://github.com/Armin2208/Windows-Auto-Night-Mode)    |       ✓       |
+|                 [file-converter](https://file-converter.org)                  |       ✓       |
+|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |
+| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       |
