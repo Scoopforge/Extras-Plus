@@ -1,4 +1,4 @@
-# 🍨 Scoop Extras Plus 🍨
+# 🍨 Extras-Plus 🍨
 
 [![Excavator](https://github.com/Scoopforge/Extras-Plus/actions/workflows/ci.yml/badge.svg)](https://github.com/Scoopforge/Extras-Plus/actions/workflows/ci.yml)
 [![license](https://img.shields.io/github/license/Scoopforge/Extras-Plus)](https://github.com/Scoopforge/Extras-Plus/blob/master/LICENSE)
