@@ -59,7 +59,7 @@ scoop install git
 ### ✈️ Step 3: Add this wonderful bucket and update, mua~ 💋
 
 ```powershell
-scoop bucket add Extras-plus https://github.com/Scoopforge/Extras-Plus
+scoop bucket add extras-plus https://github.com/Scoopforge/Extras-Plus
 scoop update
 ```
 

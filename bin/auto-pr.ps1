@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 param(
     # overwrite upstream param
-    [String]$upstream = 'scoopforge/scoop-extras-plus:main'
+    [String]$upstream = 'scoopforge/extras-plus:main'
 )
 
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
