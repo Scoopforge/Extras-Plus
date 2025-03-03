@@ -25,11 +25,13 @@
         "github": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode"
     },
     "autoupdate": {
-        "64bit": {
-            "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkModeX_$version_x86.zip"
-        },
-        "arm64": {
-            "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkModeX_$version_ARM64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkModeX_$version_x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkModeX_$version_ARM64.zip"
+            }
         }
     }
 }
