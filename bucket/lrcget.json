@@ -20,9 +20,7 @@
             "LRCGET"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/tranxuanthang/lrcget"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {

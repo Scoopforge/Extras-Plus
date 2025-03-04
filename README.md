@@ -99,6 +99,7 @@ scoop config aria2-min-split-size 4M
 |    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |              |
 |                   [kindle](https://amazon.com/kindleapps)                    |       ✓       |              |
 |              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |              |
+|               [musicat](https://github.com/basharovV/musicat)                |       ✓       |              |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |              |
 |                   [mendeley-desktop](http://mendeley.com/)                   |       ✓       |              |
 |               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |              |
