@@ -85,32 +85,49 @@ scoop config aria2-min-split-size 4M
 
 ### Cross-Platform
 
-|                                     App                                      | Auto-Update ? |                           |
-| :--------------------------------------------------------------------------: | :-----------: | :-----------------------: |
-|               [alexandria](https://github.com/btpf/Alexandria)               |       ✓       |                           |
-|          [alist-helper](https://github.com/Xmarmalade/alisthelper)           |       ✓       |                           |
-|                       [buzz](https://buzzcaptions.com)                       |       ✓       |                           |
-|                       [chatbox](https://chatboxai.app)                       |       ✓       |                           |
-|                            [cap](https://cap.so)                             |       x       | No Version Info Available |
-|                      [cytoscape](https://cytoscape.org)                      |       ✓       |                           |
-|                         [dbgate](https://dbgate.org)                         |       ✓       |                           |
-|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |                           |
-|              [ecopast](https://github.com/EcoPasteHub/EcoPaste)              |       ✓       |                           |
-|          [filecentipede](https://github.com/filecxx/FileCentipede)           |       ✓       |       by @CronusLM        |
-|    [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop)    |       ✓       |                           |
-|                   [kindle](https://amazon.com/kindleapps)                    |       ✓       |                           |
-|              [lrcget](https://github.com/tranxuanthang/lrcget)               |       ✓       |                           |
-|               [musicat](https://github.com/basharovV/musicat)                |       ✓       |                           |
-| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |                           |
-|                   [mendeley-desktop](http://mendeley.com/)                   |       ✓       |                           |
-|               [netlogo](https://ccl.northwestern.edu/netlogo)                |       ✓       |                           |
-|                    [pdf4qt](https://jakubmelka.github.io)                    |       ✓       |                           |
-|                        [readest](https://readest.com)                        |       ✓       |                           |
-|               [scihubeva](https://github.com/leovan/SciHubEVA)               |       ✓       |        by @leovan         |
-|                      [texlive](https://tug.org/texlive)                      |       ✓       |                           |
-|                      [veracrypt](https://veracrypt.fr)                       |       ✓       |                           |
-|                 [vibe](https://github.com/thewh1teagle/vibe)                 |       ✓       |                           |
-|                   [voov-meeting](https://voovmeeting.com)                    |       ✓       |                           |
+#### Daily Use
+
+|                            App                            | Auto-Update ? |              |
+| :-------------------------------------------------------: | :-----------: | :----------: |
+|     [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
+| [alist-helper](https://github.com/Xmarmalade/alisthelper) |       ✓       |              |
+|                   [cap](https://cap.so)                   |       x       |              |
+|    [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
+| [filecentipede](https://github.com/filecxx/FileCentipede) |       ✓       | by @CronusLM |
+|          [kindle](https://amazon.com/kindleapps)          |       ✓       |              |
+|     [lrcget](https://github.com/tranxuanthang/lrcget)     |       ✓       |              |
+|      [musicat](https://github.com/basharovV/musicat)      |       ✓       |              |
+|          [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
+|              [readest](https://readest.com)               |       ✓       |              |
+|             [veracrypt](https://veracrypt.fr)             |       ✓       |              |
+|          [voov-meeting](https://voovmeeting.com)          |       ✓       |              |
+
+#### Academic Tools
+
+|                                  App                                   | Auto-Update ? |            |
+| :--------------------------------------------------------------------: | :-----------: | :--------: |
+|                   [cytoscape](https://cytoscape.org)                   |       ✓       |            |
+| [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop) |       ✓       |            |
+|                [mendeley-desktop](http://mendeley.com/)                |       ✓       |            |
+|            [netlogo](https://ccl.northwestern.edu/netlogo)             |       ✓       |            |
+|            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
+|                   [texlive](https://tug.org/texlive)                   |       ✓       |            |
+
+#### AI Tools
+
+|                     App                      | Auto-Update ? |       |
+| :------------------------------------------: | :-----------: | :---: |
+|       [buzz](https://buzzcaptions.com)       |       ✓       |       |
+|       [chatbox](https://chatboxai.app)       |       ✓       |       |
+| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |       |
+
+#### Development Tools
+
+|                                     App                                      | Auto-Update ? |       |
+| :--------------------------------------------------------------------------: | :-----------: | :---: |
+|                         [dbgate](https://dbgate.org)                         |       ✓       |       |
+|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
+| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |       |
 
 ### Win-Only
 

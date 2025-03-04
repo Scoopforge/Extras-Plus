@@ -16,9 +16,7 @@
         ]
     ],
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\"  -Force -Recurse",
-    "checkver": {
-        "github": "https://github.com/EcoPasteHub/EcoPaste"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
