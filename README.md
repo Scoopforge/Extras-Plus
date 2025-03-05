@@ -87,7 +87,7 @@ scoop config aria2-min-split-size 4M
 
 #### Daily Use
 
-|                            App                            | Auto-Update ? |              |
+|                            App                            | Auto-Update ? |     Note     |
 | :-------------------------------------------------------: | :-----------: | :----------: |
 |     [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper) |       ✓       |              |
@@ -104,7 +104,7 @@ scoop config aria2-min-split-size 4M
 
 #### Academic Tools
 
-|                                  App                                   | Auto-Update ? |            |
+|                                  App                                   | Auto-Update ? |    Note    |
 | :--------------------------------------------------------------------: | :-----------: | :--------: |
 |                   [cytoscape](https://cytoscape.org)                   |       ✓       |            |
 | [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop) |       ✓       |            |
@@ -115,7 +115,7 @@ scoop config aria2-min-split-size 4M
 
 #### AI Tools
 
-|                     App                      | Auto-Update ? |       |
+|                     App                      | Auto-Update ? | Note  |
 | :------------------------------------------: | :-----------: | :---: |
 |       [buzz](https://buzzcaptions.com)       |       ✓       |       |
 |       [chatbox](https://chatboxai.app)       |       ✓       |       |
@@ -123,7 +123,7 @@ scoop config aria2-min-split-size 4M
 
 #### Development Tools
 
-|                                     App                                      | Auto-Update ? |       |
+|                                     App                                      | Auto-Update ? | Note  |
 | :--------------------------------------------------------------------------: | :-----------: | :---: |
 |                         [dbgate](https://dbgate.org)                         |       ✓       |       |
 |                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
@@ -131,7 +131,7 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                                      App                                      | Auto-Update ? |       |
+|                                      App                                      | Auto-Update ? | Note  |
 | :---------------------------------------------------------------------------: | :-----------: | :---: |
 |     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |       |
 |               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |       |
