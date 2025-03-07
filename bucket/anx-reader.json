@@ -1,0 +1,27 @@
+{
+    "version": "1.3.1",
+    "description": "A thoughtfully crafted e-book reader for book lovers",
+    "homepage": "https://github.com/Anxcye/anx-reader",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Anxcye/anx-reader/releases/download/v1.3.1/Anx-Reader-windows-1.3.1.zip",
+            "hash": "afb92486cb1856e6162470e41735604db1740080ad81557e064bd7ccc1fd56c7"
+        }
+    },
+    "shortcuts": [
+        [
+            "anx_reader.exe",
+            "Anx Reader"
+        ]
+    ],
+    "persist": "anx_reader_Data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Anxcye/anx-reader/releases/download/v$version/Anx-Reader-windows-$version.zip"
+            }
+        }
+    }
+}

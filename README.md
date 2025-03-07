@@ -40,7 +40,7 @@ irm get.scoop.sh -outfile 'install.ps1'
 
 ### 📖 Step 3: Glance at quick-start by `scoop help`
 
-For more information, please visit Scoop official site at 👉 https://scoop.sh/ 👈
+For more information, please visit 👉 [Scoop official site](https://scoop.sh/) 👈
 
 ## 🚗 Install Apps from this bucket
 
@@ -90,6 +90,7 @@ scoop config aria2-min-split-size 4M
 |                            App                            | Auto-Update ? |     Note     |
 | :-------------------------------------------------------: | :-----------: | :----------: |
 |     [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
+|    [anx-reader](https://github.com/Anxcye/anx-reader)     |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper) |       ✓       |              |
 |                   [cap](https://cap.so)                   |       x       |              |
 |    [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
