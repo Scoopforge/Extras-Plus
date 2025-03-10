@@ -87,21 +87,22 @@ scoop config aria2-min-split-size 4M
 
 #### Daily Use
 
-|                            App                            | Auto-Update ? |     Note     |
-| :-------------------------------------------------------: | :-----------: | :----------: |
-|     [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
-|    [anx-reader](https://github.com/Anxcye/anx-reader)     |       ✓       |              |
-| [alist-helper](https://github.com/Xmarmalade/alisthelper) |       ✓       |              |
-|                   [cap](https://cap.so)                   |       x       |              |
-|    [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
-| [filecentipede](https://github.com/filecxx/FileCentipede) |       ✓       | by @CronusLM |
-|          [kindle](https://amazon.com/kindleapps)          |       ✓       |              |
-|     [lrcget](https://github.com/tranxuanthang/lrcget)     |       ✓       |              |
-|      [musicat](https://github.com/basharovV/musicat)      |       ✓       |              |
-|          [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
-|              [readest](https://readest.com)               |       ✓       |              |
-|             [veracrypt](https://veracrypt.fr)             |       ✓       |              |
-|          [voov-meeting](https://voovmeeting.com)          |       ✓       |              |
+|                                   App                                   | Auto-Update ? |                                   Note                                   |
+| :---------------------------------------------------------------------: | :-----------: | :----------------------------------------------------------------------: |
+|            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
+|           [anx-reader](https://github.com/Anxcye/anx-reader)            |       ✓       |                                                                          |
+|        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
+|                        [cap-np](https://cap.so)                         |       x       |                                                                          |
+|           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
+|        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
+|                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
+|            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
+|             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
+|                 [pdf4qt](https://jakubmelka.github.io)                  |       ✓       |                                                                          |
+|                     [readest](https://readest.com)                      |       ✓       |                                                                          |
+|                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
+| [vokoscreen-np](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) |       ✓       | copied from [nonportable](https://github.com/ScoopInstaller/Nonportable) |
+|                 [voov-meeting](https://voovmeeting.com)                 |       ✓       |                                                                          |
 
 #### Academic Tools
 
