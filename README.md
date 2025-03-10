@@ -99,7 +99,7 @@ scoop config aria2-min-split-size 4M
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
 |             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
 |                 [pdf4qt](https://jakubmelka.github.io)                  |       ✓       |                                                                          |
-|                  [peazip-np](https://peazip.github.io)                  |       ✓       |                                                                          |
+|                  [peazip-np](https://peazip.github.io)                  |       ✓       |    copied from [MyScoop](https://github.com/FlawlessCasual17/MyScoop)    |
 |                     [readest](https://readest.com)                      |       ✓       |                                                                          |
 |                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
 | [vokoscreen-np](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) |       ✓       | copied from [nonportable](https://github.com/ScoopInstaller/Nonportable) |
@@ -134,10 +134,11 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                                      App                                      | Auto-Update ? |     Note     |
-| :---------------------------------------------------------------------------: | :-----------: | :----------: |
-|     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
-|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
-|                 [file-converter](https://file-converter.org)                  |       ✓       |              |
-|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
-| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
+|                                      App                                      | Auto-Update ? |                               Note                               |
+| :---------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------------: |
+|     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |                                                                  |
+|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |                                                                  |
+|                 [file-converter](https://file-converter.org)                  |       ✓       |                                                                  |
+|                     [winfsp-beta-np](https://winfsp.dev)                      |       ✓       |                                                                  |
+|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       | copied from [ScoopMaster](https://github.com/okibcn/ScoopMaster) |
+| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       |                           non-portable                           |
