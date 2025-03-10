@@ -139,6 +139,5 @@ scoop config aria2-min-split-size 4M
 |     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |                                                                  |
 |               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |                                                                  |
 |                 [file-converter](https://file-converter.org)                  |       ✓       |                                                                  |
-|                     [winfsp-beta-np](https://winfsp.dev)                      |       ✓       |                                                                  |
 |           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       | copied from [ScoopMaster](https://github.com/okibcn/ScoopMaster) |
 | [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       |                           non-portable                           |
