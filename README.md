@@ -92,7 +92,7 @@ scoop config aria2-min-split-size 4M
 |            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
 |           [anx-reader](https://github.com/Anxcye/anx-reader)            |       ✓       |                                                                          |
 |        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
-|                        [cap-np](https://cap.so)                         |       x       |                                                                          |
+|                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
@@ -115,6 +115,7 @@ scoop config aria2-min-split-size 4M
 |            [netlogo](https://ccl.northwestern.edu/netlogo)             |       ✓       |            |
 |            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
 |                   [texlive](https://tug.org/texlive)                   |       ✓       |            |
+|                       [tropy](https://tropy.org)                       |       ✓       |            |
 
 #### AI Tools
 
@@ -134,10 +135,10 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                                      App                                      | Auto-Update ? |                               Note                               |
-| :---------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------------: |
-|     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |                                                                  |
-|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |                                                                  |
-|                 [file-converter](https://file-converter.org)                  |       ✓       |                                                                  |
-|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       | |
-| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       |                           non-portable                           |
+|                                      App                                      | Auto-Update ? |     Note     |
+| :---------------------------------------------------------------------------: | :-----------: | :----------: |
+|     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
+|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
+|                 [file-converter](https://file-converter.org)                  |       ✓       |              |
+|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
+| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
