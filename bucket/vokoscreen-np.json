@@ -11,7 +11,8 @@
     },
     "post_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "Start-Process \"$dir\\setup.exe\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden' -ArgumentList @('in', '-c', '--am', '--al', '-t', \"$dir\")"
+        "Start-Process \"$dir\\setup.exe\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden' -ArgumentList @('in', '-c', '--am', '--al', '-t', \"$dir\")",
+        "Remove-Item \"$dir\\setup.exe\""
     ],
     "pre_uninstall": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
