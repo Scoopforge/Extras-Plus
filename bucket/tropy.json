@@ -21,8 +21,10 @@
         }
     },
     "shortcuts": [
-        "tropy.exe",
-        "tropy"
+        [
+            "tropy.exe",
+            "tropy"
+        ]
     ],
     "checkver": {
         "github": "https://github.com/tropy/tropy"
