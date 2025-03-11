@@ -3,6 +3,7 @@
     "description": "Research photo management",
     "homepage": "https://tropy.org/",
     "license": {
+        "identifier": "GNU AFFERO GENERAL PUBLIC LICENSE",
         "url": "https://github.com/tropy/tropy/blob/master/LICENSE"
     },
     "architecture": {
