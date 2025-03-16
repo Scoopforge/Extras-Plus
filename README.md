@@ -100,7 +100,6 @@ scoop config aria2-min-split-size 4M
 |             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
 |                 [pdf4qt](https://jakubmelka.github.io)                  |       ✓       |                                                                          |
 |                  [peazip-np](https://peazip.github.io)                  |       ✓       |    copied from [MyScoop](https://github.com/FlawlessCasual17/MyScoop)    |
-|                     [readest](https://readest.com)                      |       ✓       |                                                                          |
 |                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
 | [vokoscreen-np](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) |       ✓       | copied from [nonportable](https://github.com/ScoopInstaller/Nonportable) |
 |                 [voov-meeting](https://voovmeeting.com)                 |       ✓       |                                                                          |
