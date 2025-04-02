@@ -94,7 +94,6 @@ scoop config aria2-min-split-size 4M
 |        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
 |                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
-|            [esearch](https://github.com/xushengfeng/eSearch)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
