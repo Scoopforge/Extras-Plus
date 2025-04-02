@@ -99,6 +99,7 @@ scoop config aria2-min-split-size 4M
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
 |             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
+|              [normcap](https://github.com/dynobo/normcap)               |       ✓       |                                                                          |
 |                 [pdf4qt](https://jakubmelka.github.io)                  |       ✓       |                                                                          |
 |                  [peazip-np](https://peazip.github.io)                  |       ✓       |    copied from [MyScoop](https://github.com/FlawlessCasual17/MyScoop)    |
 |                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
