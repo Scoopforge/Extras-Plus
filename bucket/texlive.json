@@ -1,5 +1,5 @@
 {
-    "version": "2025-04-03",
+    "version": "2025",
     "description": "TeX Live is a cross-platform, free software distribution for the TeX typesetting system",
     "homepage": "https://tug.org/texlive/",
     "license": "LPPL,GPL2",
@@ -43,8 +43,8 @@
     ],
     "persist": "texmf-config",
     "checkver": {
-        "url": "http://ftp.cstug.cz/pub/tex/tlnet/",
-        "regex": "install-tl.zip.sha512.*?([\\d-]+) "
+        "url": "http://mirror.ctan.org/systems/texlive/tlnet/",
+        "regex": "TEXLIVE (\\d+)"
     },
     "autoupdate": {
         "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
