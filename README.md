@@ -96,6 +96,7 @@ scoop config aria2-min-split-size 4M
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
+|       [linkandroid](https://github.com/modstart-lib/linkandroid)        |       ✓       |                                                                          |
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
 |             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
 |              [normcap](https://github.com/dynobo/normcap)               |       ✓       |                                                                          |
