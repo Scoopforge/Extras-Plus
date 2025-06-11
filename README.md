@@ -133,6 +133,7 @@ scoop config aria2-min-split-size 4M
 |                         [dbgate](https://dbgate.org)                         |       ✓       |       |
 |                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |       |
+|              [xshell](https://xshell.com/free-for-home-school)               |       ✓       |       |
 
 ### Win-Only
 
