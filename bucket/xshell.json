@@ -7,14 +7,8 @@
     "description": "The Industry's Most Powerful SSH Client",
     "homepage": "https://xshell.com/free-for-home-school/",
     "depends": "isx",
-    "url": "https://cdn.netsarang.net/e07c1105/Xshell-8.0.0069p.exe#/installer.exe",
+    "url": "https://cdn.netsarang.net/3e435107/Xshell-8.0.0069p.exe",
     "hash": "b9bf7568360d641cc9620604ad851e6f3ecc3763dc4abb285a608ec08f485bf1",
-    "checkver": {
-        "regex": "https://cdn.netsarang.net/(?<hash>[^/]+)/Xshell-([\\d.]+)p.exe"
-    },
-    "autoupdate": {
-        "url": "https://cdn.netsarang.net/$matchHash/Xshell-$versionp.exe#/installer.exe"
-    },
     "persist": "data",
     "installer": {
         "script": [
@@ -68,5 +62,11 @@
             "reg.exe delete \"HKLM\\SOFTWARE\\NetSarang\\Xshell\\8\" /f *>$null",
             "reg.exe delete \"HKLM\\SOFTWARE\\WOW6432Node\\NetSarang\\Xshell\\8\" /f *>$null"
         ]
+    },
+    "checkver": {
+        "regex": "https://cdn.netsarang.net/(?<hash>[^/]+)/Xshell-([\\d.]+)p.exe"
+    },
+    "autoupdate": {
+        "url": "https://cdn.netsarang.net/$matchHash/Xshell-$versionp.exe#/installer.exe"
     }
 }
