@@ -140,8 +140,11 @@ scoop config aria2-min-split-size 4M
 |                                      App                                      | Auto-Update ? |     Note     |
 | :---------------------------------------------------------------------------: | :-----------: | :----------: |
 |     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
-|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
+|                      [files-np](https://files.community)                      |       ✓       |              |
+|                 [fancywm](https://github.com/FancyWM/fancywm)                 |       ✓       |              |
 |                 [file-converter](https://file-converter.org)                  |       ✓       |              |
+|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
+|               [qttabbar-np](https://github.com/indiff/qttabbar)               |       ✓       |    buggy     |
 |           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
 |            [visual-studio-np](https://visualstudio.microsoft.com)             |       ✓       |              |
 | [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
