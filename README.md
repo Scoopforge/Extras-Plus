@@ -133,18 +133,20 @@ scoop config aria2-min-split-size 4M
 |                         [dbgate](https://dbgate.org)                         |       ✓       |       |
 |                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
 | [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |       |
-|              [xshell](https://xshell.com/free-for-home-school)               |       ✓       |       |
 
 ### Win-Only
 
 |                                      App                                      | Auto-Update ? |     Note     |
 | :---------------------------------------------------------------------------: | :-----------: | :----------: |
 |     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
-|                      [files-np](https://files.community)                      |       ✓       |              |
+|      [configure-defender](https://github.com/AndyFul/ConfigureDefender)       |       ✓       |              |
+|  [defender-remover](https://github.com/ionuttbara/windows-defender-remover)   |       ✓       |              |
 |                 [fancywm](https://github.com/FancyWM/fancywm)                 |       ✓       |              |
 |                 [file-converter](https://file-converter.org)                  |       ✓       |              |
 |               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
 |               [qttabbar-np](https://github.com/indiff/qttabbar)               |       ✓       |    buggy     |
+|            [rectanglewin](https://github.com/ahmetb/RectangleWin)             |       ✓       |              |
 |           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
 |            [visual-studio-np](https://visualstudio.microsoft.com)             |       ✓       |              |
 | [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
+|               [xshell](https://xshell.com/free-for-home-school)               |       ✓       |              |
