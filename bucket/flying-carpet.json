@@ -13,8 +13,10 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "autoupdate": {
-            "url": "https://github.com/spieglt/FlyingCarpet/releases/download/v$version/FlyingCarpet.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/spieglt/FlyingCarpet/releases/download/v$version/FlyingCarpet.exe"
+            }
         }
     }
 }
