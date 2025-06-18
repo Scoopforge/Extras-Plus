@@ -95,6 +95,7 @@ scoop config aria2-min-split-size 4M
 |                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
+|        [flying-carpet](https://github.com/spieglt/FlyingCarpet/)        |       ✓       |                                                                          |
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
 |       [linkandroid](https://github.com/modstart-lib/linkandroid)        |       ✓       |                                                                          |
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
