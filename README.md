@@ -85,7 +85,7 @@ scoop config aria2-min-split-size 4M
 
 ### Cross-Platform
 
-#### Daily Use
+#### General Use
 
 |                                   App                                   | Auto-Update ? |                                   Note                                   |
 | :---------------------------------------------------------------------: | :-----------: | :----------------------------------------------------------------------: |
@@ -97,6 +97,7 @@ scoop config aria2-min-split-size 4M
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
 |        [flying-carpet](https://github.com/spieglt/FlyingCarpet/)        |       ✓       |                                                                          |
 |                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
+|                  [landrop-latest](https://landrop.app)                  |       ✓       |                                                                          |
 |       [linkandroid](https://github.com/modstart-lib/linkandroid)        |       ✓       |                                                                          |
 |            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
 |             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
