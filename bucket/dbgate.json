@@ -10,13 +10,6 @@
         }
     },
     "pre_install": "Remove-Item \"$dir\\resources\\app-update.yml\" -Force -Recurse",
-    "bin": [
-        [
-            "dbgate.exe",
-            "dbgate",
-            "--user-data-dir=\"$dir\\User Data\""
-        ]
-    ],
     "shortcuts": [
         [
             "dbgate.exe",

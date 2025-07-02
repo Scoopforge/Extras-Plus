@@ -29,7 +29,6 @@
             "Remove-Module -Name AppsUtils"
         ]
     },
-    "bin": "Buzz.exe",
     "shortcuts": [
         [
             "Buzz.exe",

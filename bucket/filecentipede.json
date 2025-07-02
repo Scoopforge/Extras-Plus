@@ -9,12 +9,6 @@
             "hash": "f0bdef157f45ae1652ede116ebe98d889d163e5c094e88a076e917989742fe1e"
         }
     },
-    "bin": [
-        [
-            "fileu.exe",
-            "FileCentipede"
-        ]
-    ],
     "shortcuts": [
         [
             "fileu.exe",

@@ -53,7 +53,6 @@
             "XshellIcon.ico"
         ]
     ],
-    "bin": "xshell.exe",
     "uninstaller": {
         "script": [
             "# Require Administrator rights",

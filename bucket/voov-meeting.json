@@ -20,7 +20,6 @@
             "$manifest.shortcuts = @()"
         ]
     },
-    "bin": "voovmeetingapp.exe",
     "shortcuts": [
         [
             "voovmeetingapp.exe",

@@ -15,7 +15,6 @@
             "RectangleWin"
         ]
     ],
-    "bin": "RectangleWin.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

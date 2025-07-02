@@ -13,7 +13,6 @@
         "Remove-Item -Recurse -Force $dir\\`$PLUGINSDIR\\",
         "Remove-Item -Force $dir\\uninstall.exe"
     ],
-    "bin": "LRCGET.exe",
     "shortcuts": [
         [
             "LRCGET.exe",

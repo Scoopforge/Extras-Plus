@@ -13,12 +13,6 @@
             "hash": "63b10d0b9ef40a17097fa2f567d6625446fbe5c4e2138137a432fbcd7c705ec6"
         }
     },
-    "bin": [
-        "PFiles\\NetLogo 6.4.0\\NetLogo.exe",
-        "PFiles\\NetLogo 6.4.0\\NetLogo 3D.exe",
-        "PFiles\\NetLogo 6.4.0\\HubNet Client.exe",
-        "PFiles\\NetLogo 6.4.0\\Behaviorsearch.exe"
-    ],
     "shortcuts": [
         [
             "PFiles\\NetLogo 6.4.0\\NetLogo.exe",
@@ -50,12 +44,6 @@
                 "url": "https://ccl.northwestern.edu/netlogo/$version/NetLogo-$version-32.msi"
             }
         },
-        "bin": [
-            "PFiles\\NetLogo $version\\NetLogo.exe",
-            "PFiles\\NetLogo $version\\NetLogo 3D.exe",
-            "PFiles\\NetLogo $version\\HubNet Client.exe",
-            "PFiles\\NetLogo $version\\Behaviorsearch.exe"
-        ],
         "shortcuts": [
             [
                 "PFiles\\NetLogo $version\\NetLogo.exe",
