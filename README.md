@@ -88,10 +88,11 @@ scoop config aria2-min-split-size 4M
 #### General Use
 
 |                                   App                                   | Auto-Update ? |                                   Note                                   |
-| :---------------------------------------------------------------------: | :-----------: | :----------------------------------------------------------------------: |
+|:-----------------------------------------------------------------------:|:-------------:|:------------------------------------------------------------------------:|
 |            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
 |           [anx-reader](https://github.com/Anxcye/anx-reader)            |       ✓       |                                                                          |
 |        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
+|                   [bananas](hhttps://getbananas.net/)                   |       ✓       |                                                                          |
 |                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
@@ -112,10 +113,11 @@ scoop config aria2-min-split-size 4M
 #### Academic Tools
 
 |                                  App                                   | Auto-Update ? |    Note    |
-| :--------------------------------------------------------------------: | :-----------: | :--------: |
+|:----------------------------------------------------------------------:|:-------------:|:----------:|
 |                   [cytoscape](https://cytoscape.org)                   |       ✓       |            |
 | [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop) |       ✓       |            |
 |                [mendeley-desktop](http://mendeley.com/)                |       ✓       |            |
+|                       [mogan](https://mogan.app)                       |       ✓       |            |
 |            [netlogo](https://ccl.northwestern.edu/netlogo)             |       ✓       |            |
 |            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
 |                   [texlive](https://tug.org/texlive)                   |       ✓       |            |
@@ -123,24 +125,24 @@ scoop config aria2-min-split-size 4M
 
 #### AI Tools
 
-|                     App                      | Auto-Update ? | Note  |
-| :------------------------------------------: | :-----------: | :---: |
-|       [buzz](https://buzzcaptions.com)       |       ✓       |       |
-|       [chatbox](https://chatboxai.app)       |       ✓       |       |
-| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |       |
+|                     App                      | Auto-Update ? | Note |
+|:--------------------------------------------:|:-------------:|:----:|
+|       [buzz](https://buzzcaptions.com)       |       ✓       |      |
+|       [chatbox](https://chatboxai.app)       |       ✓       |      |
+| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |      |
 
 #### Development Tools
 
-|                                     App                                      | Auto-Update ? | Note  |
-| :--------------------------------------------------------------------------: | :-----------: | :---: |
-|                         [dbgate](https://dbgate.org)                         |       ✓       |       |
-|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
-| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |       |
+|                                     App                                      | Auto-Update ? | Note |
+|:----------------------------------------------------------------------------:|:-------------:|:----:|
+|                         [dbgate](https://dbgate.org)                         |       ✓       |      |
+|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |      |
+| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |      |
 
 ### Win-Only
 
 |                                      App                                      | Auto-Update ? |     Note     |
-| :---------------------------------------------------------------------------: | :-----------: | :----------: |
+|:-----------------------------------------------------------------------------:|:-------------:|:------------:|
 |     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
 |      [configure-defender](https://github.com/AndyFul/ConfigureDefender)       |       ✓       |              |
 |  [defender-remover](https://github.com/ionuttbara/windows-defender-remover)   |       ✓       |              |
