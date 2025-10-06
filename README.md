@@ -109,6 +109,7 @@ scoop config aria2-min-split-size 4M
 |                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
 | [vokoscreen-np](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) |       ✓       | copied from [nonportable](https://github.com/ScoopInstaller/Nonportable) |
 |                 [voov-meeting](https://voovmeeting.com)                 |       ✓       |                                                                          |
+|                [ytdownloader](https://ytdn.netlify.app)                 |       ✓       |                                                                          |
 
 #### Academic Tools
 
