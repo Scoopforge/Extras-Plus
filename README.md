@@ -90,7 +90,6 @@ scoop config aria2-min-split-size 4M
 |                                   App                                   | Auto-Update ? |                                   Note                                   |
 |:-----------------------------------------------------------------------:|:-------------:|:------------------------------------------------------------------------:|
 |            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
-|           [anx-reader](https://github.com/Anxcye/anx-reader)            |       ✓       |                                                                          |
 |        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
 |                   [bananas](hhttps://getbananas.net/)                   |       ✓       |                                                                          |
 |                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
