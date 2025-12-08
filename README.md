@@ -17,7 +17,7 @@ scoop bucket add extras-plus https://github.com/Scoopforge/Extras-Plus
 
 Enjoy the fun of command line!
 
-# 🏃 To Start
+## 🏃 To Start
 
 ## 🚲 Install Scoop
 
@@ -92,6 +92,7 @@ scoop config aria2-min-split-size 4M
 |            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
 |        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
 |                   [bananas](hhttps://getbananas.net/)                   |       ✓       |                                                                          |
+|                  [bitcomet](https://www.bitcomet.com/)                  |       ✓       |                                                                          |
 |                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
 |           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
 |        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
