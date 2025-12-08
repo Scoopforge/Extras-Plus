@@ -87,29 +87,26 @@ scoop config aria2-min-split-size 4M
 
 #### General Use
 
-|                                   App                                   | Auto-Update ? |                                   Note                                   |
-|:-----------------------------------------------------------------------:|:-------------:|:------------------------------------------------------------------------:|
-|            [alexandria](https://github.com/btpf/Alexandria)             |       ✓       |                                                                          |
-|        [alist-helper](https://github.com/Xmarmalade/alisthelper)        |       ✓       |                                                                          |
-|                   [bananas](hhttps://getbananas.net/)                   |       ✓       |                                                                          |
-|                  [bitcomet](https://www.bitcomet.com/)                  |       ✓       |                                                                          |
-|                        [cap-np](https://cap.so)                         |       ✓       |                                                                          |
-|           [ecopast](https://github.com/EcoPasteHub/EcoPaste)            |       ✓       |                                                                          |
-|        [filecentipede](https://github.com/filecxx/FileCentipede)        |       ✓       |                               by @CronusLM                               |
-|        [flying-carpet](https://github.com/spieglt/FlyingCarpet/)        |       ✓       |                                                                          |
-|                 [kindle](https://amazon.com/kindleapps)                 |       ✓       |                                                                          |
-|                  [landrop-latest](https://landrop.app)                  |       ✓       |                                                                          |
-|       [linkandroid](https://github.com/modstart-lib/linkandroid)        |       ✓       |                                                                          |
-|            [lrcget](https://github.com/tranxuanthang/lrcget)            |       ✓       |                                                                          |
-|             [musicat](https://github.com/basharovV/musicat)             |       ✓       |                                                                          |
-|              [normcap](https://github.com/dynobo/normcap)               |       ✓       |                                                                          |
-|              [notegen](https://github.com/codexu/note-gen)              |       ✓       |                                                                          |
-|                 [pdf4qt](https://jakubmelka.github.io)                  |       ✓       |                                                                          |
-|                  [peazip-np](https://peazip.github.io)                  |       ✓       |    copied from [MyScoop](https://github.com/FlawlessCasual17/MyScoop)    |
-|                    [veracrypt](https://veracrypt.fr)                    |       ✓       |                                                                          |
-| [vokoscreen-np](https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html) |       ✓       | copied from [nonportable](https://github.com/ScoopInstaller/Nonportable) |
-|                 [voov-meeting](https://voovmeeting.com)                 |       ✓       |                                                                          |
-|                [ytdownloader](https://ytdn.netlify.app)                 |       ✓       |                                                                          |
+|                            App                             | Auto-Update ? |     Note     |
+|:----------------------------------------------------------:|:-------------:|:------------:|
+|      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
+| [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
+|            [bananas](hhttps://getbananas.net/)             |       ✓       |              |
+|           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
+|     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
+| [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
+| [flying-carpet](https://github.com/spieglt/FlyingCarpet/)  |       ✓       |              |
+|          [kindle](https://amazon.com/kindleapps)           |       ✓       |              |
+|           [landrop-latest](https://landrop.app)            |       ✓       |              |
+| [linkandroid](https://github.com/modstart-lib/linkandroid) |       ✓       |              |
+|     [lrcget](https://github.com/tranxuanthang/lrcget)      |       ✓       |              |
+|      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
+|        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
+|       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
+|           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
+|             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
+|          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
+|          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
 #### Academic Tools
 
@@ -150,9 +147,7 @@ scoop config aria2-min-split-size 4M
 |                 [fancywm](https://github.com/FancyWM/fancywm)                 |       ✓       |              |
 |                 [file-converter](https://file-converter.org)                  |       ✓       |              |
 |               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
-|               [qttabbar-np](https://github.com/indiff/qttabbar)               |       ✓       |    buggy     |
 |            [rectanglewin](https://github.com/ahmetb/RectangleWin)             |       ✓       |              |
 |           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
-|            [visual-studio-np](https://visualstudio.microsoft.com)             |       ✓       |              |
 | [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
 |               [xshell](https://xshell.com/free-for-home-school)               |       ✓       |              |
