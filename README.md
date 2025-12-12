@@ -11,13 +11,11 @@ A Bucket for the Best Windows Package Manager [Scoop](https://github.com/ScoopIn
 
 For ones familiar with Scoop:
 
+## 🏃 To Start
+
 ```powershell
 scoop bucket add extras-plus https://github.com/Scoopforge/Extras-Plus
 ```
-
-Enjoy the fun of command line!
-
-## 🏃 To Start
 
 ## 🚲 Install Scoop
 
