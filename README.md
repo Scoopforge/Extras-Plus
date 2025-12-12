@@ -89,7 +89,7 @@ scoop config aria2-min-split-size 4M
 |:----------------------------------------------------------:|:-------------:|:------------:|
 |      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
-|            [bananas](hhttps://getbananas.net/)             |       ✓       |              |
+|             [bananas](https://getbananas.net/)             |       ✓       |              |
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
 |     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
@@ -102,8 +102,10 @@ scoop config aria2-min-split-size 4M
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
 |       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
 |           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
+|           [stirlingpdf](https://stirlingpdf.com)           |       ✓       |              |
 |             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
 |          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
+|          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 |          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
 #### Academic Tools
