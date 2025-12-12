@@ -21,7 +21,6 @@
             "Stirling-PDF"
         ]
     ],
-    "bin": "Stirling-PDF.jar",
     "persist": [
         "configs",
         "customFiles",
