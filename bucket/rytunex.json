@@ -5,12 +5,14 @@
     "license":{
         "identifier": "GPL-3.0-only"
     },
+    
     "architecture": {
         "64bit": {
             "url": "https://github.com/rayenghanmi/RyTuneX/releases/download/v1.5.2/RyTuneXSetup.exe",
             "hash": "915096bcb65562feefd6b3f2e4de6c2221e48813b4bdd74310e35e8be5f85e40"
         }
     },
+    "innosetup": true,
     "shortcuts": [
         [
             "RyTuneX.exe",
