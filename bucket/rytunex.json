@@ -3,8 +3,7 @@
     "description": "RyTuneX is a cutting-edge optimizer built with the WinUI 3 framework, designed to amplify the performance of Windows devices. Crafted for both Windows 10 and 11.",
     "homepage": "https://github.com/rayenghanmi/RyTuneX",
     "license":{
-        "identifier": "GNU Affero General Public License v3.0",
-        "url": "https://github.com/rayenghanmi/RyTuneX/blob/main/LICENSE.md"
+        "identifier": "GPL-3.0-only"
     },
     "architecture": {
         "64bit": {
@@ -18,10 +17,7 @@
             "RyTuneX"
         ]
     ],
-    "checkver": {
-    "url": "https://api.github.com/repos/rayenghanmi/RyTuneX/releases/latest",
-    "regex": "\"tag_name\":\\s*\"v?([\\d.]+)\""
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
