@@ -5,25 +5,49 @@
     "license":{
         "identifier": "GPL-3.0-only"
     },
-    
+    "installer": {
+        "script": [
+            "# 静默安装到当前目录",
+            "Write-Host 'Installing RyTuneX...' -f Yellow",
+            "Start-Process -Wait -FilePath \"$dir\\RyTuneXSetup.exe\" -ArgumentList '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR=\"$dir\"'",
+            "# 删除安装程序",
+            "Remove-Item \"$dir\\RyTuneXSetup.exe\" -Force",
+            "# 查找并整理文件",
+            "$exeFile = Get-ChildItem -Path $dir -Filter 'RyTuneX.exe' -Recurse | Select-Object -First 1",
+            "if ($exeFile) {",
+            "    Write-Host \"Found RyTuneX.exe at: $($exeFile.FullName)\" -f Green",
+            "    # 如果不在根目录，移动到根目录",
+            "    if ($exeFile.DirectoryName -ne $dir) {",
+            "        Write-Host 'Moving files to root directory...' -f Yellow",
+            "        Move-Item -Path \"$($exeFile.DirectoryName)\\*\" -Destination $dir -Force",
+            "        Remove-Item -Path $exeFile.DirectoryName -Recurse -Force",
+            "    }",
+            "} else {",
+            "    Write-Host 'Warning: RyTuneX.exe not found after installation' -f Red",
+            "}"
+        ]
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/rayenghanmi/RyTuneX/releases/download/v1.5.2/RyTuneXSetup.exe",
             "hash": "915096bcb65562feefd6b3f2e4de6c2221e48813b4bdd74310e35e8be5f85e40"
         }
     },
-    "innosetup": true,
+
     "shortcuts": [
         [
             "RyTuneX.exe",
             "RyTuneX"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/rayenghanmi/RyTuneX",
+        "regex": "tag/v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/rayenghanmi/RyTuneX/releases/latest/download/RyTuneXSetup.exe"
+                "url": "https://github.com/rayenghanmi/RyTuneX/releases/download/v$version/RyTuneXSetup.exe"
             }
         }
     }
