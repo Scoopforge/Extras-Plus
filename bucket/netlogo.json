@@ -1,7 +1,7 @@
 {
     "version": "6.4.0",
+    "description": "Powerful yet easy-to-learn environment for agent-based modeling in both research and education",
     "homepage": "https://ccl.northwestern.edu/netlogo/",
-    "description": "turtles, patches, and links for kids, teachers, and scientists",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
@@ -32,8 +32,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://ccl.northwestern.edu/netlogo/6.4.0/",
-        "regex": "NetLogo ([\\d.]+) Downloads"
+        "github": "https://github.com/NetLogo/NetLogo"
     },
     "autoupdate": {
         "architecture": {

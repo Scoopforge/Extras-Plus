@@ -106,7 +106,6 @@ scoop config aria2-min-split-size 4M
 |             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
 |          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
 |          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
-|          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
 #### Academic Tools
 
@@ -139,15 +138,13 @@ scoop config aria2-min-split-size 4M
 
 ### Win-Only
 
-|                                      App                                      | Auto-Update ? |     Note     |
-|:-----------------------------------------------------------------------------:|:-------------:|:------------:|
-|     [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)      |       ✓       |              |
-|      [configure-defender](https://github.com/AndyFul/ConfigureDefender)       |       ✓       |              |
-|  [defender-remover](https://github.com/ionuttbara/windows-defender-remover)   |       ✓       |              |
-|                 [fancywm](https://github.com/FancyWM/fancywm)                 |       ✓       |              |
-|                 [file-converter](https://file-converter.org)                  |       ✓       |              |
-|               [jigdo](https://einval.com/~steve/software/jigdo)               |       ✓       |              |
-|            [rectanglewin](https://github.com/ahmetb/RectangleWin)             |       ✓       |              |
-|           [wisecare365](https://wisecleaner.com/wise-care-365.html)           |       ✓       |              |
-| [vmware-workstation-pro](https://vmware.com/products/desktop-hypervisor.html) |       ✓       | non-portable |
-|               [xshell](https://xshell.com/free-for-home-school)               |       ✓       |              |
+|                                    App                                     | Auto-Update ? | Note |
+|:--------------------------------------------------------------------------:|:-------------:|:----:|
+|    [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode)    |       ✓       |      |
+|     [configure-defender](https://github.com/AndyFul/ConfigureDefender)     |       ✓       |      |
+| [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |      |
+|               [fancywm](https://github.com/FancyWM/fancywm)                |       ✓       |      |
+|                [file-converter](https://file-converter.org)                |       ✓       |      |
+|             [jigdo](https://einval.com/~steve/software/jigdo)              |       ✓       |      |
+|         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |      |
+|            [xshell-np](https://xshell.com/free-for-home-school)            |       ✓       |      |
