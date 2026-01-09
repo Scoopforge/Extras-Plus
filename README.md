@@ -97,7 +97,6 @@ scoop config aria2-min-split-size 4M
 |          [kindle](https://amazon.com/kindleapps)           |       ✓       |              |
 |           [landrop-latest](https://landrop.app)            |       ✓       |              |
 | [linkandroid](https://github.com/modstart-lib/linkandroid) |       ✓       |              |
-|     [lrcget](https://github.com/tranxuanthang/lrcget)      |       ✓       |              |
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
 |       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
@@ -146,5 +145,6 @@ scoop config aria2-min-split-size 4M
 |               [fancywm](https://github.com/FancyWM/fancywm)                |       ✓       |      |
 |                [file-converter](https://file-converter.org)                |       ✓       |      |
 |             [jigdo](https://einval.com/~steve/software/jigdo)              |       ✓       |      |
+|                     [winhance](hhttps://winhance.net)                      |       ✓       |      |
 |         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |      |
 |            [xshell-np](https://xshell.com/free-for-home-school)            |       ✓       |      |
