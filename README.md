@@ -91,6 +91,7 @@ scoop config aria2-min-split-size 4M
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
 |             [bananas](https://getbananas.net/)             |       ✓       |              |
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
+|              [buzz](https://buzzcaptions.com)              |       ✓       |              |
 |     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
 | [flying-carpet](https://github.com/spieglt/FlyingCarpet/)  |       ✓       |              |
@@ -103,6 +104,7 @@ scoop config aria2-min-split-size 4M
 |           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
 |           [stirlingpdf](https://stirlingpdf.com)           |       ✓       |              |
 |             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
+|        [vibe](https://github.com/thewh1teagle/vibe)        |       ✓       |              |
 |          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
 |          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
@@ -118,14 +120,6 @@ scoop config aria2-min-split-size 4M
 |            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
 |                   [texlive](https://tug.org/texlive)                   |       ✓       |            |
 |                       [tropy](https://tropy.org)                       |       ✓       |            |
-
-#### AI Tools
-
-|                     App                      | Auto-Update ? | Note |
-|:--------------------------------------------:|:-------------:|:----:|
-|       [buzz](https://buzzcaptions.com)       |       ✓       |      |
-|       [chatbox](https://chatboxai.app)       |       ✓       |      |
-| [vibe](https://github.com/thewh1teagle/vibe) |       ✓       |      |
 
 #### Development Tools
 
@@ -147,4 +141,3 @@ scoop config aria2-min-split-size 4M
 |             [jigdo](https://einval.com/~steve/software/jigdo)              |       ✓       |      |
 |                     [winhance](hhttps://winhance.net)                      |       ✓       |      |
 |         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |      |
-|            [xshell-np](https://xshell.com/free-for-home-school)            |       ✓       |      |
