@@ -1,11 +1,15 @@
 {
     "version": "0.1.6.3",
-    "description": "一键将 Markdown 和 AI 对话完美粘贴到 Word、WPS 和 Excel 的效率工具。",
-    "homepage": "https://github.com/RICHQAQ/PasteMD",
+    "description": "One-click paste Markdown and AI responses into Word, WPS, and Excel perfectly",
+    "homepage": "https://pastemd.richqaq.cn/",
     "license": "MIT",
-    "notes": "此版本自带 Pandoc。运行后可在系统托盘找到图标进行配置。",
-    "url": "https://github.com/RICHQAQ/PasteMD/releases/download/v0.1.6.3/PasteMD_pandoc-Setup_v0.1.6.3.exe",
-    "hash": "60a51effa8c14cbd3dfb7114b45371c075340f373ee2beccc0b66c5443fe2654",
+    "notes": "It's a lightweight tray app bundled with Pandoc",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RICHQAQ/PasteMD/releases/download/v0.1.6.3/PasteMD_pandoc-Setup_v0.1.6.3.exe",
+            "hash": "60a51effa8c14cbd3dfb7114b45371c075340f373ee2beccc0b66c5443fe2654"
+        }
+    },
     "installer": {
         "args": [
             "/VERYSILENT",
@@ -28,6 +32,10 @@
         "github": "https://github.com/RICHQAQ/PasteMD"
     },
     "autoupdate": {
-        "url": "https://github.com/RICHQAQ/PasteMD/releases/download/v$version/PasteMD_pandoc-Setup_v$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RICHQAQ/PasteMD/releases/download/v$version/PasteMD_pandoc-Setup_v$version.exe"
+            }
+        }
     }
 }

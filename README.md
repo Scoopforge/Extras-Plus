@@ -101,6 +101,7 @@ scoop config aria2-min-split-size 4M
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
 |       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
+|           [pastemd](https://pastemd.richqaq.cn)            |       ✓       |              |
 |           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
 |           [stirlingpdf](https://stirlingpdf.com)           |       ✓       |              |
 |             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
