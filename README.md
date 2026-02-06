@@ -115,7 +115,6 @@ scoop config aria2-min-split-size 4M
 |:----------------------------------------------------------------------:|:-------------:|:----------:|
 |                   [cytoscape](https://cytoscape.org)                   |       ✓       |            |
 | [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop) |       ✓       |            |
-|                [mendeley-desktop](http://mendeley.com/)                |       ✓       |            |
 |                       [mogan](https://mogan.app)                       |       ✓       |            |
 |            [netlogo](https://ccl.northwestern.edu/netlogo)             |       ✓       |            |
 |            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
