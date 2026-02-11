@@ -99,6 +99,7 @@ scoop config aria2-min-split-size 4M
 |           [landrop-latest](https://landrop.app)            |       ✓       |              |
 | [linkandroid](https://github.com/modstart-lib/linkandroid) |       ✓       |              |
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
+|     [next-ai-drawio](https://next-ai-drawio.jiang.jp/)     |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
 |       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
 |           [pastemd](https://pastemd.richqaq.cn)            |       ✓       |              |
