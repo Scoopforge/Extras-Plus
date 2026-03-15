@@ -92,6 +92,7 @@ scoop config aria2-min-split-size 4M
 |             [bananas](https://getbananas.net/)             |       ✓       |              |
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
 |              [buzz](https://buzzcaptions.com)              |       ✓       |              |
+|                   [cap](https://cap.so)                    |       ✓       |              |
 |     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
 | [flying-carpet](https://github.com/spieglt/FlyingCarpet/)  |       ✓       |              |
