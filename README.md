@@ -136,7 +136,6 @@ scoop config aria2-min-split-size 4M
 
 |                             App                              | Auto-Update ? | Note |
 | :----------------------------------------------------------: | :-----------: | :--: |
-| [autodarkmode](https://github.com/Armin2208/Windows-Auto-Night-Mode) |       ✓       |      |
 | [configure-defender](https://github.com/AndyFul/ConfigureDefender) |       ✓       |      |
 | [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |      |
 |        [fancywm](https://github.com/FancyWM/fancywm)         |       ✓       |      |
