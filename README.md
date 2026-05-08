@@ -86,7 +86,8 @@ scoop config aria2-min-split-size 4M
 #### General Use
 
 |                            App                             | Auto-Update ? |     Note     |
-|:----------------------------------------------------------:|:-------------:|:------------:|
+| :--------------------------------------------------------: | :-----------: | :----------: |
+|     [aionaui](https://github.com/iOfficeAI/AionUi)      |       ✓       |              |
 |      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
 |             [bananas](https://getbananas.net/)             |       ✓       |              |
@@ -114,7 +115,7 @@ scoop config aria2-min-split-size 4M
 #### Academic Tools
 
 |                                  App                                   | Auto-Update ? |    Note    |
-|:----------------------------------------------------------------------:|:-------------:|:----------:|
+| :--------------------------------------------------------------------: | :-----------: | :--------: |
 |                   [cytoscape](https://cytoscape.org)                   |       ✓       |            |
 | [jupyterlab-desktop](https://github.com/jupyterlab/jupyterlab-desktop) |       ✓       |            |
 |                       [mogan](https://mogan.app)                       |       ✓       |            |
@@ -126,21 +127,21 @@ scoop config aria2-min-split-size 4M
 
 #### Development Tools
 
-|                                     App                                      | Auto-Update ? | Note |
-|:----------------------------------------------------------------------------:|:-------------:|:----:|
-|                         [dbgate](https://dbgate.org)                         |       ✓       |      |
-|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |      |
-| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |      |
+|                                     App                                      | Auto-Update ? | Note  |
+| :--------------------------------------------------------------------------: | :-----------: | :---: |
+|                         [dbgate](https://dbgate.org)                         |       ✓       |       |
+|                       [doxygen-gui](http://doxygen.nl)                       |       ✓       |       |
+| [navicat-premium-lite](https://navicat.com/en/products/navicat-premium-lite) |       ✓       |       |
 
 ### Win-Only
 
-|                             App                              | Auto-Update ? | Note |
-| :----------------------------------------------------------: | :-----------: | :--: |
-| [configure-defender](https://github.com/AndyFul/ConfigureDefender) |       ✓       |      |
-| [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |      |
-|        [fancywm](https://github.com/FancyWM/fancywm)         |       ✓       |      |
-|         [file-converter](https://file-converter.org)         |       ✓       |      |
-|      [jigdo](https://einval.com/~steve/software/jigdo)       |       ✓       |      |
-|              [winhance](hhttps://winhance.net)               |       ✓       |      |
-|  [wisecare365](https://wisecleaner.com/wise-care-365.html)   |       ✓       |      |
-|        [catime](https://github.com/vladelaina/Catime)        |       ✓       |      |
+|                                    App                                     | Auto-Update ? | Note  |
+| :------------------------------------------------------------------------: | :-----------: | :---: |
+|     [configure-defender](https://github.com/AndyFul/ConfigureDefender)     |       ✓       |       |
+| [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |       |
+|               [fancywm](https://github.com/FancyWM/fancywm)                |       ✓       |       |
+|                [file-converter](https://file-converter.org)                |       ✓       |       |
+|             [jigdo](https://einval.com/~steve/software/jigdo)              |       ✓       |       |
+|                     [winhance](hhttps://winhance.net)                      |       ✓       |       |
+|         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |       |
+|               [catime](https://github.com/vladelaina/Catime)               |       ✓       |       |
