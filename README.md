@@ -81,18 +81,26 @@ scoop config aria2-min-split-size 4M
 
 ## ⭐️ Summary
 
-### Cross-Platform
+### AI Specific
 
-#### General Use
+|                        App                         | Auto-Update ? | Note  |
+| :------------------------------------------------: | :-----------: | :---: |
+|   [aionaui](https://github.com/iOfficeAI/AionUi)   |       ✓       |       |
+|          [buzz](https://buzzcaptions.com)          |
+| [next-ai-drawio](https://next-ai-drawio.jiang.jp/) |       ✓       |       |
+|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |       |
+
+|                         ✓                          |               |
+|    [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |       |
+
+### General Use
 
 |                            App                             | Auto-Update ? |     Note     |
 | :--------------------------------------------------------: | :-----------: | :----------: |
-|     [aionaui](https://github.com/iOfficeAI/AionUi)      |       ✓       |              |
 |      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
 |             [bananas](https://getbananas.net/)             |       ✓       |              |
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
-|              [buzz](https://buzzcaptions.com)              |       ✓       |              |
 |                   [cap](https://cap.so)                    |       ✓       |              |
 |     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
@@ -101,14 +109,11 @@ scoop config aria2-min-split-size 4M
 |           [landrop-latest](https://landrop.app)            |       ✓       |              |
 | [linkandroid](https://github.com/modstart-lib/linkandroid) |       ✓       |              |
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
-|     [next-ai-drawio](https://next-ai-drawio.jiang.jp/)     |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
-|       [notegen](https://github.com/codexu/note-gen)        |       ✓       |              |
 |           [pastemd](https://pastemd.richqaq.cn)            |       ✓       |              |
 |           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
 |           [stirlingpdf](https://stirlingpdf.com)           |       ✓       |              |
 |             [veracrypt](https://veracrypt.fr)              |       ✓       |              |
-|        [vibe](https://github.com/thewh1teagle/vibe)        |       ✓       |              |
 |          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
 |          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
@@ -125,7 +130,7 @@ scoop config aria2-min-split-size 4M
 |                       [tropy](https://tropy.org)                       |       ✓       |            |
 |                      [zlibrary](https://1lib.sk)                       |       ✓       |            |
 
-#### Development Tools
+### Development Tools
 
 |                                     App                                      | Auto-Update ? | Note  |
 | :--------------------------------------------------------------------------: | :-----------: | :---: |
