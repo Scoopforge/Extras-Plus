@@ -1,0 +1,32 @@
+{
+    "version": "26.5.7",
+    "description": "The Next Generation GoldenDict",
+    "homepage": "https://github.com/xiaoyifang/goldendict-ng",
+    "license": "https://github.com/xiaoyifang/goldendict-ng?tab=License-1-ov-file",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v26.5.7/GoldenDict-ng-26.5.7-Qt6.10.3-Windows.7z",
+            "hash": "706951afc710560d92d38bf83df87df296a9484ee2f78fa5e81840a46dadd9bb"
+        }
+    },
+    "pre_install": [
+        "$actualFolder = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -ne '*.tmp' } | Select-Object -First 1",
+        "if ($actualFolder) {",
+        "    Rename-Item $actualFolder.FullName \"$dir\\glodendict-ng\" -Force",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "glodendict-ng\\goldendict.exe",
+            "glodendict-ng"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v$version/GoldenDict-ng-$version-Qt6.10.3-Windows.7z"
+            }
+        }
+    }
+}
