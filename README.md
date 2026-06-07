@@ -86,10 +86,9 @@ scoop config aria2-min-split-size 4M
 |                        App                         | Auto-Update ? | Note  |
 | :------------------------------------------------: | :-----------: | :---: |
 |   [aionaui](https://github.com/iOfficeAI/AionUi)   |       ✓       |       |
-|          [buzz](https://buzzcaptions.com)          |
+|          [buzz](https://buzzcaptions.com)          |               |       |
 | [next-ai-drawio](https://next-ai-drawio.jiang.jp/) |       ✓       |       |
-|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |       |
-
+|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |
 |                         ✓                          |               |
 |    [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |       |
 
@@ -146,7 +145,6 @@ scoop config aria2-min-split-size 4M
 | [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |       |
 |               [fancywm](https://github.com/FancyWM/fancywm)                |       ✓       |       |
 |                [file-converter](https://file-converter.org)                |       ✓       |       |
-|             [jigdo](https://einval.com/~steve/software/jigdo)              |       ✓       |       |
 |                     [winhance](hhttps://winhance.net)                      |       ✓       |       |
 |         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |       |
 |               [catime](https://github.com/vladelaina/Catime)               |       ✓       |       |
