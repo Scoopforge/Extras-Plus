@@ -88,8 +88,8 @@ scoop config aria2-min-split-size 4M
 |   [aionaui](https://github.com/iOfficeAI/AionUi)   |       ✓       |       |
 |          [buzz](https://buzzcaptions.com)          |               |       |
 | [next-ai-drawio](https://next-ai-drawio.jiang.jp/) |       ✓       |       |
-|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |
-|                         ✓                          |               |
+|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |       |
+|                         ✓                          |               |       |
 |    [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |       |
 
 ### General Use
