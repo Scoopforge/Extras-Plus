@@ -141,10 +141,11 @@ scoop config aria2-min-split-size 4M
 
 |                                    App                                     | Auto-Update ? | Note  |
 | :------------------------------------------------------------------------: | :-----------: | :---: |
-|     [configure-defender](https://github.com/AndyFul/ConfigureDefender)     |       ✓       |       |
 | [defender-remover](https://github.com/ionuttbara/windows-defender-remover) |       ✓       |       |
+|     [configure-defender](https://github.com/AndyFul/ConfigureDefender)     |       ✓       |       |
+|       [watt-toolkit](https://github.com/BeyondDimension/SteamTools/)       |       ✓       |       |
+|         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |       |
 |               [fancywm](https://github.com/FancyWM/fancywm)                |       ✓       |       |
+|               [catime](https://github.com/vladelaina/Catime)               |       ✓       |       |
 |                [file-converter](https://file-converter.org)                |       ✓       |       |
 |                     [winhance](hhttps://winhance.net)                      |       ✓       |       |
-|         [wisecare365](https://wisecleaner.com/wise-care-365.html)          |       ✓       |       |
-|               [catime](https://github.com/vladelaina/Catime)               |       ✓       |       |
