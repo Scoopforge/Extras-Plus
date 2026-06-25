@@ -1,6 +1,6 @@
 {
     "version": "0.14.1",
-    "description": "LLM与Agent的智能文档解析引擎",
+    "description": "Intelligent Document Parsing Engine for LLMs and Agents",
     "homepage": "https://mineru.net",
     "license": "Proprietary",
     "url": "https://webpub.shlab.tech/MinerU/latest/win/MinerU-0.14.1-setup.exe#/dl.7z",
