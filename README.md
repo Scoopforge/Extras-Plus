@@ -107,6 +107,7 @@ scoop config aria2-min-split-size 4M
 |          [kindle](https://amazon.com/kindleapps)           |       ✓       |              |
 |           [landrop-latest](https://landrop.app)            |       ✓       |              |
 | [linkandroid](https://github.com/modstart-lib/linkandroid) |       ✓       |              |
+|                [mineru](https://mineru.net)                |       ✓       |              |
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
 |           [pastemd](https://pastemd.richqaq.cn)            |       ✓       |              |
