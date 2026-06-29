@@ -91,6 +91,7 @@ scoop config aria2-min-split-size 4M
 |   [notegen](https://github.com/codexu/note-gen)    |       ✓       |       |
 |                         ✓                          |               |       |
 |    [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |       |
+|          [voicebox](https://voicebox.sh/)          |       ✓       |       |
 
 ### General Use
 
@@ -117,7 +118,7 @@ scoop config aria2-min-split-size 4M
 |          [voov-meeting](https://voovmeeting.com)           |       ✓       |              |
 |          [ytdownloader](https://ytdn.netlify.app)          |       ✓       |              |
 
-#### Academic Tools
+### Academic Tools
 
 |                                  App                                   | Auto-Update ? |    Note    |
 | :--------------------------------------------------------------------: | :-----------: | :--------: |
