@@ -97,6 +97,7 @@ scoop config aria2-min-split-size 4M
 
 |                            App                             | Auto-Update ? |     Note     |
 | :--------------------------------------------------------: | :-----------: | :----------: |
+|          [affinity](https://www.affinity.studio)           |       ✓       |              |
 |      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
 |             [bananas](https://getbananas.net/)             |       ✓       |              |
