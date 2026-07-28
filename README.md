@@ -83,15 +83,15 @@ scoop config aria2-min-split-size 4M
 
 ### AI Specific
 
-|                        App                         | Auto-Update ? | Note  |
-| :------------------------------------------------: | :-----------: | :---: |
-|   [aionaui](https://github.com/iOfficeAI/AionUi)   |       ✓       |       |
-|          [buzz](https://buzzcaptions.com)          |               |       |
-| [next-ai-drawio](https://next-ai-drawio.jiang.jp/) |       ✓       |       |
-|   [notegen](https://github.com/codexu/note-gen)    |       ✓       |       |
-|                         ✓                          |               |       |
-|    [vibe](https://github.com/thewh1teagle/vibe)    |       ✓       |       |
-|          [voicebox](https://voicebox.sh/)          |       ✓       |       |
+|                          App                          | Auto-Update ? | Note  |
+| :---------------------------------------------------: | :-----------: | :---: |
+|    [aionaui](https://github.com/iOfficeAI/AionUi)     |       ✓       |       |
+|           [buzz](https://buzzcaptions.com)            |               |       |
+|  [next-ai-drawio](https://next-ai-drawio.jiang.jp/)   |       ✓       |       |
+|     [notegen](https://github.com/codexu/note-gen)     |       ✓       |       |
+| [open-design](https://github.com/nexu-io/open-design) |       ✓       |       |
+|     [vibe](https://github.com/thewh1teagle/vibe)      |       ✓       |       |
+|           [voicebox](https://voicebox.sh/)            |       ✓       |       |
 
 ### General Use
 
