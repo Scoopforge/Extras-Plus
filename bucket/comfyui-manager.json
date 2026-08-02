@@ -1,12 +1,12 @@
 {
-    "version": "2026.07.29.171923",
+    "version": "2026.08.02.131531",
     "description": "Extension designed to enhance the usability of ComfyUI",
     "homepage": "https://github.com/Comfy-Org/ComfyUI-Manager",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Comfy-Org/ComfyUI-Manager/archive/refs/heads/main.zip",
-            "hash": "a185bc517d52dea8972db5160a90075167ebb073d9c9a497593335b3fb1aa114"
+            "hash": "5b12637e3d1be342d2d1ad0bd1a5cf0d3dd61a596d15f7f479c649e41f75c50d"
         }
     },
     "depends": "scoopforge/comfyui",
