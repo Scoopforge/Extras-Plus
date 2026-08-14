@@ -129,6 +129,7 @@ scoop config aria2-min-split-size 4M
 |            [netlogo](https://ccl.northwestern.edu/netlogo)             |       ✓       |            |
 |            [scihubeva](https://github.com/leovan/SciHubEVA)            |       ✓       | by @leovan |
 |                   [texlive](https://tug.org/texlive)                   |       ✓       |            |
+|                   [tylina](https://tylina.github.io)                   |       ✓       |            |
 |                       [tropy](https://tropy.org)                       |       ✓       |            |
 |                      [zlibrary](https://1lib.sk)                       |       ✓       |            |
 
