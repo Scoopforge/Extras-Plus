@@ -6,7 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://api.anthropic.com/api/desktop/win32/x64/msix/latest/redirect#/dl.zip",
-            "hash": "da15dc60c979b4c278278ac0b00e754716fc2163d2b1144a1a570dd82bb7b13d"
+            "hash": "91355db2152f96ec14bd2eca036f6e456e3d1dff39e8f9a1283240785a4deec7"
+        },
+        "arm64": {
+            "url": "https://api.anthropic.com/api/desktop/win32/arm64/msix/latest/redirect#/dl.zip",
+            "hash": "b500d1cd84a84c7575cb6e9a4a8b18e76404c7bea16dbcc7612958f3406bf610"
         }
     },
     "shortcuts": [
@@ -16,13 +20,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.anthropic.com/api/desktop/win32/x64/msix/latest/redirect",
-        "regex": "releases/win32/x64/([\\d.]+)/"
+        "url": "https://api.github.com/repos/microsoft/winget-pkgs/commits?path=manifests/a/Anthropic/Claude",
+        "regex": "New version.*? ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://api.anthropic.com/api/desktop/win32/x64/msix/latest/redirect#/dl.zip"
+            },
+            "arm64": {
+                "url": "https://api.anthropic.com/api/desktop/win32/arm64/msix/latest/redirect#/dl.zip"
             }
         }
     }

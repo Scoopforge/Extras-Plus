@@ -87,6 +87,7 @@ scoop config aria2-min-split-size 4M
 | :---------------------------------------------------: | :-----------: | :---: |
 |    [aionaui](https://github.com/iOfficeAI/AionUi)     |       ✓       |       |
 |           [buzz](https://buzzcaptions.com)            |               |       |
+|          [claude-desktop](https://claude.ai)          |       ✓       |       |
 |  [next-ai-drawio](https://next-ai-drawio.jiang.jp/)   |       ✓       |       |
 |     [notegen](https://github.com/codexu/note-gen)     |       ✓       |       |
 | [open-design](https://github.com/nexu-io/open-design) |       ✓       |       |
