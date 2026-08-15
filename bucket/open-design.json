@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v0.19.2/open-design-0.19.2-win-x64-setup.exe",
-            "hash": "8d6712a522517de9ff7ca996645442f4e23e4df6f1e95681c8603d94ba5bf7ea"
+            "hash": "dd3a78a5ed73b6d7da2e374e73a019470a00abce2f4f95896eb7b899c1dad756"
         }
     },
     "pre_install": [
