@@ -93,6 +93,7 @@ scoop config aria2-min-split-size 4M
 | [open-design](https://github.com/nexu-io/open-design) |       ✓       |       |
 |     [vibe](https://github.com/thewh1teagle/vibe)      |       ✓       |       |
 |           [voicebox](https://voicebox.sh/)            |       ✓       |       |
+|        [voicestudio](https://voicestudio.sh/)         |       ✓       |       |
 
 ### General Use
 
