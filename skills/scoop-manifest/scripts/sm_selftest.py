@@ -111,6 +111,17 @@ def check_recipes(check: Checker) -> None:
         bool(recipes), "recipe catalog is not empty", f"{len(recipes)} recipes"
     )
 
+    stray_json = sorted(
+        path.relative_to(L.skill_root()).as_posix()
+        for path in L.skill_root().rglob("*")
+        if path.is_file() and path.suffix == ".json"
+    )
+    check.expect(
+        not stray_json,
+        "no .json file in the package (the CI manifest gate would validate it)",
+        ", ".join(stray_json) if stray_json else L.CATALOG_NAME,
+    )
+
     ids = [r["id"] for r in recipes]
     check.expect(len(ids) == len(set(ids)), "recipe ids are unique")
     check.expect(
@@ -325,7 +336,7 @@ def check_docs(check: Checker) -> None:
             "; ".join(drift) if drift else "",
         )
 
-    # recipes.md ↔ recipes.catalog
+    # recipes.md ↔ recipes.jsonc
     recipes_doc = refs / "recipes.md"
     if not recipes_doc.is_file():
         check.fail("references/recipes.md is missing")
@@ -390,7 +401,6 @@ def main() -> int:
 
     check_recipes(check)
     check_render(check)
-    check_docs(check)
 
     try:
         repo = L.find_repo_root(Path(args.repo) if args.repo else None)
@@ -400,6 +410,8 @@ def main() -> int:
     if repo is not None:
         check_repo(check, repo)
         check_lint_baseline(check, repo)
+
+    check_docs(check)
 
     print("\n" + "-" * 56)
     print(f"{len(check.failures)} failures, {len(check.warnings)} warnings")

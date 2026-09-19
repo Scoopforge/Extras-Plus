@@ -3,7 +3,7 @@
 Layers:
     paths        skill_root / assets_dir / find_repo_root / bucket_dir
     serialize    load_manifest / dumps_manifest / write_manifest (4-space indent + CRLF + trailing newline + canonical key order)
-    recipes      load_recipes / recipe_by_id / build_manifest (assets/recipes.catalog is the single source of truth)
+    recipes      load_recipes / recipe_by_id / build_manifest (assets/recipes.jsonc is the single source of truth)
     checkver     detect_latest (github / url+regex / url+jsonpath+regex+replace)
     hashing      sha256_url / sha256_file
     lint        RULES / lint_manifest_text
@@ -286,11 +286,14 @@ def write_manifest(path: Path, data: dict, preserve_order: bool = False) -> None
 
 # The catalog is data, not a Scoop manifest, so it deliberately avoids a .json
 # extension. This repo's CI runs Scoop's manifest gate (Import-Bucket-Tests.ps1)
-# over every *.json file changed by a commit, anywhere in the tree: the -Path
-# argument only locates the repository, it does not filter by sub-directory.
-# Anything named *.json is validated against Scoop's schema.json, which requires
-# version / homepage / license / url and forbids unknown top-level keys.
-CATALOG_NAME = "recipes.catalog"
+# over every file of a commit whose path matches the -Include pattern '*.json'.
+# BuildHelpers filters with -like and its -Path argument only locates the
+# repository, so that match is not scoped to a sub-directory: anything named
+# *.json is validated against Scoop's schema.json, which requires version /
+# homepage / license / url and forbids unknown top-level keys. '*.json' does not
+# match 'recipes.jsonc'. The content stays strict JSON: skill-forge maps .jsonc
+# to its json-parse checker, and a JSONC comment would fail that gate.
+CATALOG_NAME = "recipes.jsonc"
 
 
 def load_recipes() -> dict:

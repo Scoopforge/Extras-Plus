@@ -1,7 +1,7 @@
 # Recipe catalog (16 recipes)
 
 A recipe is a template for one combination of fields, autoupdate shape and
-checkver form. The data source is `assets/recipes.catalog`; this document is the
+checkver form. The data source is `assets/recipes.jsonc`; this document is the
 readable version, kept in sync by `scripts/sm_selftest.py`.
 
 Decision order: **look at what upstream publishes first, then at how to unpack
@@ -363,7 +363,7 @@ host application and must be `git clone`d into the host directory.
 
 ## Adding a recipe
 
-1. Add an entry to the `recipes` array in `assets/recipes.catalog` with `id` /
+1. Add an entry to the `recipes` array in `assets/recipes.jsonc` with `id` /
    `label` / `when` / `builder` / `required` / `optional` / `refs`, and add the
    new parameters to `param_docs`.
 2. Register a builder of the same name in `BUILDERS` in `scripts/sm_lib.py`.

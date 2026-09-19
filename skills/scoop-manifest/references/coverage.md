@@ -1,10 +1,9 @@
 # Coverage: where the recipes come from
 
-`assets/recipes.catalog` was not drawn from a blank page, and it is not meant to
-be
-exhaustive. This document records the survey of the upstream bucket that sized
-the catalog, maps every recipe onto the upstream population it covers, and states
-what was deliberately left out. Read it when a manifest in front of you does not
+`assets/recipes.jsonc` was not drawn from a blank page, and it is not meant to be
+exhaustive. This document records the survey of the upstream bucket that sized the
+catalog, maps every recipe onto the upstream population it covers, and states what
+was deliberately left out. Read it when a manifest in front of you does not
 obviously match a recipe: the two questions are "which upstream shape is this?"
 and "is it one of the known gaps?".
 
@@ -162,7 +161,7 @@ covered. The catalog emits `64bit` and `arm64` only, so `url32` / `hash32` do
 not exist here and `32bit` is rejected as an `arch` value. Restoring it means
 one entry each in `ARCH_PARAM` / `ARCH_HASH_PARAM` in `sm_lib.py`, the matching
 `--url32` / `--hash32` flags in `scoop_manifest.py`, and the `param_docs` /
-recipe lists in `recipes.catalog`.
+recipe lists in `recipes.jsonc`.
 
 ## 6. Download shapes
 

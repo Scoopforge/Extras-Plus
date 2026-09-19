@@ -182,4 +182,4 @@ above. Pass `--reorder` to rewrite everything.
 - Which recipe applies, and what it emits: `references/recipes.md`
 - Where the recipes came from, and what is not covered: `references/coverage.md`
 - Lint rules: `references/lint-rules.md`
-- Recipe data (single source of truth): `assets/recipes.catalog`
+- Recipe data (single source of truth): `assets/recipes.jsonc`

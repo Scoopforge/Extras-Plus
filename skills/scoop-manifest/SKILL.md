@@ -1,6 +1,6 @@
 ---
 name: scoop-manifest
-version: 1.3.0
+version: 1.4.0
 description: >
   Generate, update and lint Scoop bucket app manifests (bucket/*.json). Three
   trigger commands: generate builds a skeleton from one of 16 built-in recipes and
@@ -36,8 +36,8 @@ Package layout:
 - `references/recipes.md` when each of the 16 recipes applies, and what it emits
 - `references/lint-rules.md` the 22 rules and how to fix each one
 - `references/coverage.md` the upstream survey behind the catalog, and the gaps
-- `assets/recipes.catalog` the single source of truth for recipes (JSON, but
-  deliberately not named `.json` -- see "1. Hard constraints")
+- `assets/recipes.jsonc` the single source of truth for recipes: plain JSON under
+  a deliberately non-`.json` name -- see "1. Hard constraints"
 
 Scripts derive the package root themselves, so **they run from any cwd**:
 
@@ -59,11 +59,15 @@ Managed interpreter on this machine:
   explicit `--reorder`.
 - **Self-check before writing**: the result goes through the rule engine first,
   and error-level findings block the write (`--force` overrides).
-- **Never add a `.json` file to this package.** The bucket CI runs Scoop's
-  manifest gate over every `.json` file a commit changes, anywhere in the tree
-  (its `-Path` argument locates the repository, it does not filter by
-  sub-directory), and validates each one against `schema.json`. The recipe
-  catalog is data, not a manifest, so it ships as `assets/recipes.catalog`.
+- **Never add a `.json` file to this package.** The bucket CI hands Scoop's
+  manifest gate every path a commit changes that matches its `*.json` include
+  pattern -- a `-like` match on the repo-relative path, anywhere in the tree (the
+  `-Path` argument only locates the repository, it does not filter by
+  sub-directory) -- and validates each match against `schema.json`. The recipe
+  catalog is data, not a manifest, so it ships as `assets/recipes.jsonc`:
+  `*.json` does not match `.jsonc`. Keep the content strict JSON -- the `.jsonc`
+  name is there to dodge the gate, not to allow comments, which the `json-parse`
+  checker in skill-forge would reject.
 - **README is controlled**: the header must be exactly the three columns
   `App / Auto-Update ? / Note`, and a missing section skips the sync with an
   explanation. Centering already matches this repo's 5 tables byte for byte, so
@@ -110,7 +114,7 @@ python scripts/scoop_manifest.py gen --from specs.json --section "General Use"
 ```
 
 `--from` reads a spec file, which suits batches: an object or an array of
-objects whose keys are the `param_docs` names from `recipes.catalog`, plus
+objects whose keys are the `param_docs` names from `recipes.jsonc`, plus
 `name`, `recipe` and `section`. Command-line options win over the file.
 
 **Pick one of three ways to obtain the hash, never invent it**: `--fetch-hash`
@@ -200,11 +204,11 @@ The self-check has 6 groups: recipe catalog shape -> recipe <-> builder coverage
 both ways -> virtual rendering of all 16 recipes -> repo serialization round-trip
 -> README table round-trip and row-insert idempotence -> docs <-> code
 consistency (`lint-rules.md` matches `RULES` word for word, `recipes.md` maps
-one-to-one onto `recipes.catalog`, and `SKILL.md`'s `name` equals the directory
+one-to-one onto `recipes.jsonc`, and `SKILL.md`'s `name` equals the directory
 name).
 
 **Adding a recipe** (4 steps, and the self-check catches omissions): add an entry
-to the `recipes` array in `recipes.catalog` (`id` / `label` / `when` /
+to the `recipes` array in `recipes.jsonc` (`id` / `label` / `when` /
 `builder` / `required` / `refs`) and document any new parameters in `param_docs`
 -> register
 a builder of the same name in `BUILDERS` in `sm_lib.py` -> add a `## <recipe id>`
