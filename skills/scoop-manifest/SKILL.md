@@ -1,13 +1,13 @@
 ---
 name: scoop-manifest
-version: 1.1.0
+version: 1.3.0
 description: >
   Generate, update and lint Scoop bucket app manifests (bucket/*.json). Three
-  trigger commands: generate builds a skeleton from one of 9 built-in recipes and
+  trigger commands: generate builds a skeleton from one of 16 built-in recipes and
   fills in version, URL, hash, checkver, autoupdate and shortcuts, optionally
   syncing the README summary table; update edits fields by dotted path, bumps the
   version while rewriting hard-coded URLs, recomputes hashes and probes upstream
-  for the latest release (batch sweep supported); lint runs 21 rules against this
+  for the latest release (batch sweep supported); lint runs 22 rules against this
   repo's CI and .editorconfig conventions and repairs formatting with
   --fix-format.
   Triggers: generate manifest, new manifest, update manifest, lint manifest,
@@ -27,15 +27,17 @@ everything runs offline except `--checkver`, `--fetch-hash` and `--rehash`.
 
 Package layout:
 
-- `scripts/sm_lib.py` shared layer: paths, serialization, the 9 builders,
+- `scripts/sm_lib.py` shared layer: paths, serialization, the 15 builders,
   checkver, rule engine, README table sync
 - `scripts/scoop_manifest.py` the three-command CLI
 - `scripts/sm_selftest.py` self-check: recipes <-> builders, docs <-> code,
   repo round-trip, lint baseline
 - `references/manifest-fields.md` manifest field reference (this repo's rules)
-- `references/recipes.md` when each of the 9 recipes applies, and what it emits
-- `references/lint-rules.md` the 21 rules and how to fix each one
-- `assets/recipes.json` the single source of truth for recipes
+- `references/recipes.md` when each of the 16 recipes applies, and what it emits
+- `references/lint-rules.md` the 22 rules and how to fix each one
+- `references/coverage.md` the upstream survey behind the catalog, and the gaps
+- `assets/recipes.catalog` the single source of truth for recipes (JSON, but
+  deliberately not named `.json` -- see "1. Hard constraints")
 
 Scripts derive the package root themselves, so **they run from any cwd**:
 
@@ -57,6 +59,11 @@ Managed interpreter on this machine:
   explicit `--reorder`.
 - **Self-check before writing**: the result goes through the rule engine first,
   and error-level findings block the write (`--force` overrides).
+- **Never add a `.json` file to this package.** The bucket CI runs Scoop's
+  manifest gate over every `.json` file a commit changes, anywhere in the tree
+  (its `-Path` argument locates the repository, it does not filter by
+  sub-directory), and validates each one against `schema.json`. The recipe
+  catalog is data, not a manifest, so it ships as `assets/recipes.catalog`.
 - **README is controlled**: the header must be exactly the three columns
   `App / Auto-Update ? / Note`, and a missing section skips the sync with an
   explanation. Centering already matches this repo's 5 tables byte for byte, so
@@ -68,7 +75,7 @@ Managed interpreter on this machine:
 | :--- | :--- | :--- | :--- |
 | **generate** | `gen` | Build a manifest from a recipe and fill it in, optionally sync README | `--list-recipes`, `--from`, `--recipe`, `--fetch-hash`, `--hash-from-file`, `--section`, `--dry-run` |
 | **update** | `upd` | Edit fields / bump version + rewrite URLs / recompute hashes / probe upstream | `--name`, `--all`, `--set`, `--unset`, `--version`, `--rehash`, `--checkver [--apply]` |
-| **lint** | `check` | Run the 21 rules, repair formatting | `--name`, `--json`, `--strict`, `--fix-format`, `--rules` |
+| **lint** | `check` | Run the 22 rules, repair formatting | `--name`, `--json`, `--strict`, `--fix-format`, `--rules` |
 
 Shared option `--repo <bucket repo root>`: without it the script walks up from
 the cwd looking for a directory holding both `bucket/` and `README.md`.
@@ -86,8 +93,9 @@ the cwd looking for a directory holding both `bucket/` and `README.md`.
    `Development Tools` / `Win-Only`
 
 Unsure about the recipe? Run `--list-recipes` first; it prints when each recipe
-applies, the required and optional parameters, and same-kind samples already in
-the repo. Then compare against `references/recipes.md`.
+applies, the required and optional parameters, and same-kind samples (from this
+repo where a manifest of that shape exists, from the upstream bucket otherwise).
+Then compare against `references/recipes.md`.
 
 ```bash
 python scripts/scoop_manifest.py gen --name myapp --recipe github-nsis-7z \
@@ -102,8 +110,8 @@ python scripts/scoop_manifest.py gen --from specs.json --section "General Use"
 ```
 
 `--from` reads a spec file, which suits batches: an object or an array of
-objects whose keys are the `param_docs` names from `recipes.json`, plus `name`,
-`recipe` and `section`. Command-line options win over the file.
+objects whose keys are the `param_docs` names from `recipes.catalog`, plus
+`name`, `recipe` and `section`. Command-line options win over the file.
 
 **Pick one of three ways to obtain the hash, never invent it**: `--fetch-hash`
 streams the download and computes it; `--hash-from-file <path>` uses a package
@@ -132,10 +140,11 @@ python scripts/scoop_manifest.py upd --all --checkver --apply --rehash  # sweep
 
 `--version` rewrites the old version hard-coded in every download URL.
 
-`--checkver` understands four shapes: the `github` string, `{"github": ...}`,
-`{"url", "regex"}` and `{"url", "jsonpath", "regex", "replace"}`. **The
-`{"script": ...}` form needs a Scoop environment and explicitly reports that it
-cannot probe offline**; use `bin/checkver.ps1` instead.
+`--checkver` understands the `github` string, `{"github": ...}`, bare-string
+regex (scraped from `homepage`), `{"url", "regex"}`, `{"url", "jsonpath",
+"regex", "replace"}`, `{"url", "xpath", ...}` and `{"sourceforge": ...}`.
+**The `{"script": ...}` form needs a Scoop environment and explicitly reports that
+it cannot probe offline**; use `bin/checkver.ps1` instead.
 
 Safety net: the rule engine runs after every change and error-level findings
 **block the write** (`--force` overrides); `--dry-run` previews and
@@ -176,8 +185,9 @@ found so far:
 
 Not for: installers that need interaction, MSI customisation, or packages with
 private unpacking logic beyond `$PLUGINSDIR` (hand-writing is easier); archives
-over 2GB (aria2 and hash verification degrade); and any change under `bin/`,
-`scripts/` or `.github/`.
+over 2GB (aria2 and hash verification degrade); **32bit architecture** — `arch`
+takes `64bit` and `arm64` only, so `url32` / `hash32` are neither accepted nor
+emitted; and any change under `bin/`, `scripts/` or `.github/`.
 
 ## 7. Maintenance
 
@@ -187,15 +197,16 @@ python scripts/sm_selftest.py --verbose  # print every detail
 ```
 
 The self-check has 6 groups: recipe catalog shape -> recipe <-> builder coverage
-both ways -> virtual rendering of all 9 recipes -> repo serialization round-trip
+both ways -> virtual rendering of all 16 recipes -> repo serialization round-trip
 -> README table round-trip and row-insert idempotence -> docs <-> code
 consistency (`lint-rules.md` matches `RULES` word for word, `recipes.md` maps
-one-to-one onto `recipes.json`, and `SKILL.md`'s `name` equals the directory
+one-to-one onto `recipes.catalog`, and `SKILL.md`'s `name` equals the directory
 name).
 
 **Adding a recipe** (4 steps, and the self-check catches omissions): add an entry
-to the `recipes` array in `recipes.json` (`id` / `label` / `when` / `builder` /
-`required` / `refs`) and document any new parameters in `param_docs` -> register
+to the `recipes` array in `recipes.catalog` (`id` / `label` / `when` /
+`builder` / `required` / `refs`) and document any new parameters in `param_docs`
+-> register
 a builder of the same name in `BUILDERS` in `sm_lib.py` -> add a `## <recipe id>`
 section to `recipes.md` -> run `sm_selftest.py`.
 

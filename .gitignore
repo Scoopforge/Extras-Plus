@@ -1,5 +1,6 @@
 .DS_Store
-.ruff_cache/
 .workbuddy/*
 
+# Python
+.ruff_cache/
 *.pyc

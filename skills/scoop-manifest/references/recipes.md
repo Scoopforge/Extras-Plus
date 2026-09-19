@@ -1,7 +1,7 @@
 # Recipe catalog (16 recipes)
 
 A recipe is a template for one combination of fields, autoupdate shape and
-checkver form. The data source is `assets/recipes.json`; this document is the
+checkver form. The data source is `assets/recipes.catalog`; this document is the
 readable version, kept in sync by `scripts/sm_selftest.py`.
 
 Decision order: **look at what upstream publishes first, then at how to unpack
@@ -29,7 +29,9 @@ plugin (into a host app)           → github-git-clone
 ```
 
 Where each recipe came from, and what is still uncovered, is in
-`references/coverage.md`.
+`references/coverage.md`. The **Samples** line under each recipe cites files
+from this repo where a manifest of that shape exists, and from the upstream
+`ScoopInstaller/Extras` bucket otherwise.
 
 ## github-portable-zip
 
@@ -37,7 +39,7 @@ Where each recipe came from, and what is still uncovered, is in
 
 **Required** `version`, `desc`, `homepage`, `license`, `url64`
 
-**Optional** `repo_url`, `arch`, `url32`, `url_arm64`, `extract_dir`,
+**Optional** `repo_url`, `arch`, `url_arm64`, `extract_dir`,
 `shortcut_exe`, `shortcut_name`, `persist`, `suggest`
 
 **Output** with a single architecture the `url` / `hash` pair lands at the top
@@ -95,7 +97,7 @@ Output (single architecture):
 
 **Required** `version`, `desc`, `homepage`, `license`, `url64`, `shortcut_exe`
 
-**Optional** `repo_url`, `arch`, `url32`, `url_arm64`, `shortcut_name`,
+**Optional** `repo_url`, `arch`, `url_arm64`, `shortcut_name`,
 `bin_exe`, `bin_alias`, `persist`
 
 **Samples** `scihubeva`, `pastemd`, `winhance`, `isobuster`, `doxygen-gui`,
@@ -361,7 +363,7 @@ host application and must be `git clone`d into the host directory.
 
 ## Adding a recipe
 
-1. Add an entry to the `recipes` array in `assets/recipes.json` with `id` /
+1. Add an entry to the `recipes` array in `assets/recipes.catalog` with `id` /
    `label` / `when` / `builder` / `required` / `optional` / `refs`, and add the
    new parameters to `param_docs`.
 2. Register a builder of the same name in `BUILDERS` in `scripts/sm_lib.py`.

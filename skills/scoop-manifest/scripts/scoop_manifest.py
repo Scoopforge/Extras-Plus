@@ -31,6 +31,25 @@ L.use_utf8_stdio()
 # --------------------------------------------------------------------------
 
 
+def _json_arg(raw: str, flag: str):
+    """Parse a JSON command-line value, e.g. '["app.exe", "App"]'."""
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise L.SmError(f"{flag} needs valid JSON, got {raw!r} ({exc})") from exc
+
+
+def _key_value_pairs(items: list[str], flag: str) -> OrderedDict:
+    """Turn repeated KEY=VALUE flags into an object, e.g. --env-set A=1 B=2."""
+    pairs: OrderedDict = OrderedDict()
+    for item in items:
+        if "=" not in item:
+            raise L.SmError(f"{flag} expects KEY=VALUE, got {item!r}")
+        key, value = item.split("=", 1)
+        pairs[key] = value
+    return pairs
+
+
 def repo_root_from(args) -> Path:
     return L.find_repo_root(Path(args.repo) if getattr(args, "repo", None) else None)
 
@@ -70,14 +89,16 @@ def cmd_generate(args: argparse.Namespace) -> int:
     catalog = L.load_recipes()
 
     if args.list_recipes:
-        print("Available recipes (assets/recipes.json):\n")
+        print(f"Available recipes (assets/{L.CATALOG_NAME}):\n")
         for recipe in catalog["recipes"]:
             print(f"  {recipe['id']}  —  {recipe['label']}")
             print(f"      When: {recipe['when']}")
             print(f"      Required: {', '.join(recipe['required'])}")
             if recipe.get("optional"):
                 print(f"      Optional: {', '.join(recipe['optional'])}")
-            print(f"      Repo samples: {', '.join(recipe['refs'])}\n")
+            print(
+                f"      Samples: {', '.join(recipe['refs']) or 'see references/coverage.md'}\n"
+            )
         print("See references/manifest-fields.md for parameter docs")
         return 0
 
@@ -118,6 +139,7 @@ def _collect_specs(args: argparse.Namespace, catalog: dict) -> list[dict]:
         "desc": args.desc,
         "homepage": args.homepage,
         "license": args.license,
+        "comment": args.comment,
         "url": args.url,
         "url64": args.url64,
         "url_arm64": args.url_arm64,
@@ -131,20 +153,45 @@ def _collect_specs(args: argparse.Namespace, catalog: dict) -> list[dict]:
         "nsis_payload": args.nsis_payload,
         "shortcut_exe": args.shortcut_exe,
         "shortcut_name": args.shortcut_name,
+        "shortcut_entries": _json_arg(args.shortcut_entry, "--shortcut-entry")
+        if args.shortcut_entry
+        else None,
         "bin_exe": args.bin_exe,
         "bin_alias": args.bin_alias,
+        "bin_entries": _json_arg(args.bin_entry, "--bin-entry")
+        if args.bin_entry
+        else None,
         "persist": args.persist,
+        "env_add_path": args.env_add_path,
+        "env_set": _key_value_pairs(args.env_set, "--env-set")
+        if args.env_set
+        else None,
         "notes": args.notes,
         "suggest": args.suggest,
         "depends": args.depends,
         "installer_script": args.installer_script,
+        "installer_file": args.installer_file,
+        "installer_args": args.installer_arg,
         "uninstaller_script": args.uninstaller_script,
         "post_install": args.post_install,
         "pre_install": args.pre_install,
+        "pre_uninstall": args.pre_uninstall,
+        "post_uninstall": args.post_uninstall,
+        "msi_mode": args.msi_mode,
+        "msi_args": args.msi_arg,
+        "psmodule_name": args.psmodule_name,
+        "psmodule_path": args.psmodule_path,
+        "extra_urls": args.extra_url,
+        "extra_hashes": args.extra_hash,
         "checkver_url": args.checkver_url,
         "checkver_regex": args.checkver_regex,
         "checkver_jsonpath": args.checkver_jsonpath,
+        "checkver_xpath": args.checkver_xpath,
         "checkver_replace": args.checkver_replace,
+        "checkver_reverse": args.checkver_reverse,
+        "checkver_useragent": args.checkver_useragent,
+        "checkver_script": args.checkver_script,
+        "checkver_sourceforge": args.checkver_sourceforge,
         "au_hash_url": args.au_hash_url,
         "au_hash_regex": args.au_hash_regex,
         "url_au": args.url_au,
@@ -733,6 +780,7 @@ def build_parser() -> argparse.ArgumentParser:
     gen.add_argument("--desc", help="one-line English description")
     gen.add_argument("--homepage", help="upstream homepage")
     gen.add_argument("--license", help="SPDX identifier, or Proprietary")
+    gen.add_argument("--comment", help="free text for the ## comment key")
     gen.add_argument("--url", help="single-architecture direct download URL")
     gen.add_argument("--url64", help="64bit direct download URL")
     gen.add_argument("--url-arm64", dest="url_arm64", help="arm64 direct download URL")
@@ -762,20 +810,104 @@ def build_parser() -> argparse.ArgumentParser:
     )
     gen.add_argument("--shortcut-exe", dest="shortcut_exe")
     gen.add_argument("--shortcut-name", dest="shortcut_name")
+    gen.add_argument(
+        "--shortcut-entry",
+        dest="shortcut_entry",
+        action="append",
+        metavar="JSON",
+        help="verbatim shortcuts array as JSON, repeatable (overrides --shortcut-exe)",
+    )
     gen.add_argument("--bin-exe", dest="bin_exe")
     gen.add_argument("--bin-alias", dest="bin_alias")
+    gen.add_argument(
+        "--bin-entry",
+        dest="bin_entry",
+        action="append",
+        metavar="JSON",
+        help='one bin entry as JSON, repeatable, e.g. \'["app.exe","alias"]\'',
+    )
     gen.add_argument("--persist")
+    gen.add_argument("--env-add-path", dest="env_add_path")
+    gen.add_argument(
+        "--env-set",
+        dest="env_set",
+        action="append",
+        metavar="KEY=VALUE",
+        help="environment variable written on install, repeatable",
+    )
     gen.add_argument("--notes")
     gen.add_argument("--suggest")
     gen.add_argument("--depends")
     gen.add_argument("--installer-script", dest="installer_script")
+    gen.add_argument(
+        "--installer-file",
+        dest="installer_file",
+        help="run a file that came with the package instead of a script",
+    )
+    gen.add_argument(
+        "--installer-arg",
+        dest="installer_arg",
+        action="append",
+        help="argument for --installer-file, repeatable",
+    )
     gen.add_argument("--uninstaller-script", dest="uninstaller_script")
     gen.add_argument("--post-install", dest="post_install")
     gen.add_argument("--pre-install", dest="pre_install")
+    gen.add_argument("--pre-uninstall", dest="pre_uninstall")
+    gen.add_argument("--post-uninstall", dest="post_uninstall")
+    gen.add_argument(
+        "--msi-mode",
+        dest="msi_mode",
+        choices=["extract", "install"],
+        help="how to handle an .msi: unpack it (default) or run msiexec as admin",
+    )
+    gen.add_argument(
+        "--msi-arg",
+        dest="msi_arg",
+        action="append",
+        help="extra msiexec flag for --msi-mode install, repeatable",
+    )
+    gen.add_argument("--psmodule-name", dest="psmodule_name")
+    gen.add_argument("--psmodule-path", dest="psmodule_path")
+    gen.add_argument(
+        "--extra-url",
+        dest="extra_url",
+        action="append",
+        help="sidecar download URL, repeatable (needs a matching --extra-hash)",
+    )
+    gen.add_argument(
+        "--extra-hash",
+        dest="extra_hash",
+        action="append",
+        help="sha256 matching the nth --extra-url, repeatable",
+    )
     gen.add_argument("--checkver-url", dest="checkver_url")
     gen.add_argument("--checkver-regex", dest="checkver_regex")
     gen.add_argument("--checkver-jsonpath", dest="checkver_jsonpath")
+    gen.add_argument("--checkver-xpath", dest="checkver_xpath")
     gen.add_argument("--checkver-replace", dest="checkver_replace")
+    gen.add_argument(
+        "--checkver-reverse",
+        dest="checkver_reverse",
+        action="store_true",
+        default=None,
+        help="take the last regex match instead of the first",
+    )
+    gen.add_argument(
+        "--checkver-useragent",
+        dest="checkver_useragent",
+        help="custom User-Agent for the checkver request",
+    )
+    gen.add_argument(
+        "--checkver-script",
+        dest="checkver_script",
+        help="PowerShell snippet returning the text --checkver-regex runs against",
+    )
+    gen.add_argument(
+        "--checkver-sourceforge",
+        dest="checkver_sourceforge",
+        help="SourceForge project path, e.g. beebeep/Windows",
+    )
     gen.add_argument(
         "--au-hash-url",
         dest="au_hash_url",

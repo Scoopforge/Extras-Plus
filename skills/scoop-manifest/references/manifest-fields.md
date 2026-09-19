@@ -1,8 +1,9 @@
 # Scoop manifest field reference (this repo's conventions)
 
 This document describes the fields the Extras-Plus repo (`bucket/*.json`)
-actually uses. It is derived from statistics over the 56 manifests here plus
-the existing CI config; nothing is invented about Scoop internals.
+actually uses. It is derived from statistics over the 56 manifests here, the
+2,389-manifest survey in `references/coverage.md`, and the existing CI config;
+nothing is invented about Scoop internals.
 [Scoop Wiki · App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
 as authoritative.
 
@@ -35,18 +36,18 @@ formatting deviation (`lint` reports W109; `lint --fix-format` repairs it).
 
 ### 2.2 Download and install fields
 
-| Field                              | Type               | Notes                                                                                                                          | Sample in this repo                                 |
-| :--------------------------------- | :----------------- | :----------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
-| `url`                              | string or string[] | Single-architecture direct download URL. A top-level `url` together with `architecture` is redundant (W108)                    | `veracrypt` uses a top-level `url`                  |
-| `hash`                             | string or string[] | sha256 of the download. **Must be 64 lowercase hex chars**; when `url` is an array, `hash` must be an array of the same length | `normcap` and `buzz` use the array form             |
-| `architecture`                     | object             | `{"64bit": {...}, "arm64": {...}}`; `64bit` is mandatory                                                                       | 40/56 use it; `claude-desktop` covers 64bit + arm64 |
-| `extract_dir`                      | string             | Inner directory name the archive is extracted into                                                                             | `cytoscape`, `comfyui`                              |
-| `extract_to`                       | string             | Subdirectory under `$dir` to extract into, usually the same value as `extract_dir`                                             | `bananas`, `aionui`                                 |
-| `innosetup`                        | bool               | Declares an InnoSetup payload so Scoop unpacks it natively, **instead of** a hand-written `installer.script`                   | `scihubeva`, `winhance`, `pastemd`                  |
-| `installer`                        | object             | `{"script": ...}`, a custom install script (string or string array)                                                            | `vibe`, `texlive`, `cap`                            |
-| `uninstaller`                      | object             | `{"script": ...}`, a custom uninstall script                                                                                   | `comfyui-manager`, `linkandroid`                    |
-| `pre_install` / `post_install`     | string or string[] | Hooks before and after install                                                                                                 | `veracrypt`, `mogan`                                |
-| `pre_uninstall` / `post_uninstall` | string or string[] | Hooks before and after uninstall                                                                                               | `mogan`, `affinity`                                 |
+| Field                              | Type               | Notes                                                                                                                                | Sample in this repo                                 |
+| :--------------------------------- | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
+| `url`                              | string or string[] | Single-architecture direct download URL. A top-level `url` together with `architecture` is redundant (W108)                          | `veracrypt` uses a top-level `url`                  |
+| `hash`                             | string or string[] | sha256 of the download. **Must be 64 lowercase hex chars**; when `url` is an array, `hash` must be an array of the same length       | `normcap` and `buzz` use the array form             |
+| `architecture`                     | object             | `{"64bit": {...}, "arm64": {...}}`; `64bit` is mandatory                                                                             | 40/56 use it; `claude-desktop` covers 64bit + arm64 |
+| `extract_dir`                      | string             | Inner directory name the archive is extracted into                                                                                   | `cytoscape`, `comfyui`                              |
+| `extract_to`                       | string             | Subdirectory under `$dir` to extract into, usually the same value as `extract_dir`                                                   | `bananas`, `aionui`                                 |
+| `innosetup`                        | bool               | Declares an InnoSetup payload so Scoop unpacks it natively, **instead of** a hand-written `installer.script`                         | `scihubeva`, `winhance`, `pastemd`                  |
+| `installer`                        | object             | `{"script": ...}` for a custom install script (string or string array), or `{"file": ..., "args": [...]}` to run a bundled setup exe | `vibe`, `texlive`, `cap`                            |
+| `uninstaller`                      | object             | `{"script": ...}`, a custom uninstall script                                                                                         | `comfyui-manager`, `linkandroid`                    |
+| `pre_install` / `post_install`     | string or string[] | Hooks before and after install                                                                                                       | `veracrypt`, `mogan`                                |
+| `pre_uninstall` / `post_uninstall` | string or string[] | Hooks before and after uninstall                                                                                                     | `mogan`, `affinity`                                 |
 
 ### 2.3 Integration fields
 
@@ -57,36 +58,59 @@ formatting deviation (`lint` reports W109; `lint --fix-format` repairs it).
 | `persist`      | string or string[]         | Directories / files kept across versions                                                                       | `mogan`, `veracrypt`                           |
 | `env_set`      | object                     | Environment variables written on install                                                                       | `TEXMACS_HOME_PATH` in `mogan`                 |
 | `env_add_path` | string or string[]         | Directories appended to PATH                                                                                   | `bin\windows` in `texlive`                     |
+| `psmodule`     | object                     | `{"name": ..., "path": ...}` for a PowerShell module package instead of `bin` / `shortcuts`                    | none here; `completionpredictor` upstream      |
 | `suggest`      | object or string           | Packages suggested alongside                                                                                   | `cytoscape`, `stirlingpdf`                     |
 | `depends`      | string or string[]         | Hard dependency                                                                                                | `scoopforge/comfyui` in `comfyui-manager`      |
 | `notes`        | string                     | Message printed after install                                                                                  | `dingtalk-en`, `ecopaste`                      |
+| `##`           | string                     | **The documented way to leave a comment inside a manifest.** Scoop ignores it; use it instead of `_comment`    | none here; 54 upstream manifests               |
 
 ### 2.4 The `#/` fragment in URLs
 
 The trailing `#/name` in a URL decides the file name on disk and
 **therefore which way Scoop processes the download**:
 
-| Form                                 | Effect                                              | Sample in this repo              |
-| :----------------------------------- | :-------------------------------------------------- | :------------------------------- |
-| `...exe#/dl.7z`                      | unpack the exe as a 7z archive                      | `dingtalk-en`, `mogan`, `aionui` |
-| `...exe#/dl.zip`                     | unpack as a zip                                     | `claude-desktop`                 |
-| `...exe#/setup.exe`                  | keep it as an exe and hand it to `installer.script` | `veracrypt`                      |
-| `...?d=x&v=1#/isobuster_install.exe` | query string and fragment together                  | `isobuster`                      |
+| Form                                 | Effect                                                                                                              | Sample in this repo              |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :------------------------------- |
+| `...exe#/dl.7z`                      | unpack the exe as a 7z archive                                                                                      | `dingtalk-en`, `mogan`, `aionui` |
+| `...exe#/dl.zip`                     | unpack as a zip                                                                                                     | `claude-desktop`                 |
+| `...exe#/setup.exe`                  | keep it as an exe and hand it to `installer.script`                                                                 | `veracrypt`                      |
+| `...msi#/setup.msi_`                 | keep the MSI as a file; **the trailing `_` hides the extension, so Scoop does not pick `Expand-MsiArchive` for it** | `affinity`, `normcap`            |
+| `...?d=x&v=1#/isobuster_install.exe` | query string and fragment together                                                                                  | `isobuster`                      |
 
-## 3. The four checkver forms
+`lib/decompress.ps1` chooses the extraction function from the **on-disk file
+name**, matching `\.zip$`, `\.msi$` and (`innosetup` only) `\.exe$`, then falling
+back to "is this 7z-readable". A name ending in `_` matches none of those, which
+is the whole point of the convention: without the underscore an `.msi` download
+is silently unpacked with `Expand-MsiArchive` instead of reaching your
+`installer.script`.
 
-| Form          | Structure                                                     | Use when                                               | Sample in this repo                |
-| :------------ | :------------------------------------------------------------ | :----------------------------------------------------- | :--------------------------------- |
-| string        | `"checkver": "github"`                                        | the GitHub repo can be derived from `url` / `homepage` | `scihubeva`, `alexandria`          |
-| github object | `{"github": "https://github.com/o/r"}`                        | the homepage is not GitHub but releases are            | `bananas`, `mogan`                 |
-| url + regex   | `{"url": ..., "regex": ...}`                                  | upstream is a website / own CDN (20 of them)           | `veracrypt`, `bitcomet`, `texlive` |
-| jsonpath      | `{"url": ..., "jsonpath": ..., "regex": ..., "replace": ...}` | only an API or rolling builds are offered              | `comfyui-manager`, `filecentipede` |
-| script        | `{"script": [...], "regex": ...}`                             | a PowerShell request is needed to get the value        | `dingtalk-en` (the only one)       |
+## 3. checkver forms
+
+| Form          | Structure                                            | Use when                                                      | Sample in this repo                |
+| :------------ | :--------------------------------------------------- | :------------------------------------------------------------ | :--------------------------------- |
+| string        | `"checkver": "github"`                               | the GitHub repo can be derived from `url` / `homepage`        | `scihubeva`, `alexandria`          |
+| github object | `{"github": "https://github.com/o/r"}`               | the homepage is not GitHub but releases are                   | `bananas`, `mogan`                 |
+| bare regex    | `"checkver": "Version ([\\d.]+)"`                    | the homepage itself lists the version and a regex can read it | none here; 147 upstream manifests  |
+| url + regex   | `{"url": ..., "regex": ...}`, optionally `+ replace` | upstream is a website / own CDN                               | `veracrypt`, `bitcomet`, `texlive` |
+| jsonpath      | `{"url": ..., "jsonpath": ..., "regex": ...}`        | only an API or rolling builds are offered                     | `comfyui-manager`, `filecentipede` |
+| xpath         | `{"url": ..., "xpath": ..., "regex": ...}`           | the version lives in an XML / RSS document                    | none here; 15 upstream manifests   |
+| sourceforge   | `{"sourceforge": "project/path", "regex": ...}`      | upstream is a SourceForge project                             | none here; 15 upstream manifests   |
+| script        | `{"script": [...], "regex": ...}`                    | a PowerShell request is needed to get the value               | `dingtalk-en` (the only one)       |
 
 Key points:
 
-- The **`github` form needs no `regex`**; `url` and `script` must have one.
+- The **`github` and `sourceforge` forms need no `regex`**; `url`, `script`,
+  `xpath` and `jsonpath` must have one.
+- **`checkver` with no `url` scrapes `homepage`** — `bin/checkver.ps1` sets
+  `$url = $json.homepage` under its "Not Specified" branch. A regex on its own
+  is the shorthand for exactly that.
+- `reverse`, `replace` and `useragent` need the **object** form; a bare string
+  cannot carry them.
+- A `checkver.github` value must be a repository URL, **never an
+  `api.github.com` one**: Scoop appends `/releases/latest` unconditionally, so
+  the API path turns into a 404 (W111). Put the API endpoint in `checkver.url`.
 - Prefer a `(?<version>...)` named group; without one Scoop takes the first group.
+- `jsonpath` may also be spelled `jp`; both are read.
 - A leading `v` in the upstream tag needs no handling; Scoop strips it.
 - The `script` form needs a Scoop environment, so this skill's `update --checkver`
   cannot probe it offline and says so explicitly.
@@ -116,14 +140,31 @@ Key points:
 
 ## 5. Canonical key order
 
-Field order produced by `gen`:
+Field order produced by `gen` (`CANONICAL_ORDER` in `sm_lib.py`):
 
 ```text
-version → description → homepage → license → notes → architecture → url → hash
-→ pre_install → installer → innosetup → extract_dir → extract_to → post_install
-→ bin → shortcuts → persist → env_set → env_add_path → suggest → depends
-→ uninstaller → pre_uninstall → post_uninstall → checkver → autoupdate
+## → version → description → homepage → license → notes → architecture → url
+→ hash → pre_install → installer → innosetup → extract_dir → extract_to
+→ post_install → psmodule → bin → shortcuts → persist → env_set → env_add_path
+→ suggest → depends → uninstaller → pre_uninstall → post_uninstall
+→ checkver → autoupdate
 ```
+
+Nested levels have their own order:
+
+| Parent                      | Order                                                                                                                                          |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| `architecture`              | `64bit` → `arm64`                                                                                                                              |
+| `architecture.<arch>`       | `url`, `hash`, `pre_install`, `installer`, `innosetup`, `extract_dir`, `extract_to`, `post_install`, `psmodule`, `bin`, `shortcuts`, `persist` |
+| `checkver`                  | `github`, `url`, `sourceforge`, `script`, `jsonpath`, `xpath`, `regex`, `replace`, `reverse`, `useragent`                                      |
+| `autoupdate`                | `architecture`, `url`, `hash`, `extract_dir`, `bin`, `shortcuts`                                                                               |
+| `installer` / `uninstaller` | `script`, `args`                                                                                                                               |
+| `hash`                      | `url`, `regex`, `jsonpath`                                                                                                                     |
+
+Only `64bit` and `arm64` are recognised. `arch` takes one of them, or the two
+joined with `+`; anything else is rejected with the list of valid values.
+**32bit is out of scope by decision**, so `url32` / `hash32` are neither
+accepted nor generated, and `32bit` is not a valid `arch` value.
 
 `update` **does not rewrite the whole file** (avoiding huge diffs): existing
 fields keep their position and only new fields are inserted in the order
@@ -138,6 +179,7 @@ above. Pass `--reorder` to rewrite everything.
 
 ## 7. Related files
 
-- Recipe reference: `references/recipes.md`
+- Which recipe applies, and what it emits: `references/recipes.md`
+- Where the recipes came from, and what is not covered: `references/coverage.md`
 - Lint rules: `references/lint-rules.md`
-- Recipe data (single source of truth): `assets/recipes.json`
+- Recipe data (single source of truth): `assets/recipes.catalog`

@@ -170,7 +170,7 @@ def check_render(check: Checker) -> None:
         except json.JSONDecodeError as exc:
             check.fail(f"{recipe['id']} produced invalid JSON", str(exc))
             continue
-        findings = L.lint_manifest_text(text, spec["name"])
+        findings = L.lint_manifest_text(text, str(spec["name"]))
         errors = [f for f in findings if f.severity == "error"]
         if errors:
             check.fail(
@@ -325,7 +325,7 @@ def check_docs(check: Checker) -> None:
             "; ".join(drift) if drift else "",
         )
 
-    # recipes.md ↔ recipes.json
+    # recipes.md ↔ recipes.catalog
     recipes_doc = refs / "recipes.md"
     if not recipes_doc.is_file():
         check.fail("references/recipes.md is missing")
@@ -352,9 +352,7 @@ def check_docs(check: Checker) -> None:
     )
 
     # coverage.md documents where the recipes come from and what is still uncovered
-    check.expect(
-        (refs / "coverage.md").is_file(), "references/coverage.md exists"
-    )
+    check.expect((refs / "coverage.md").is_file(), "references/coverage.md exists")
 
     # SKILL.md frontmatter matches the directory name
     skill_file = L.skill_root() / "SKILL.md"

@@ -3,7 +3,7 @@
 Layers:
     paths        skill_root / assets_dir / find_repo_root / bucket_dir
     serialize    load_manifest / dumps_manifest / write_manifest (4-space indent + CRLF + trailing newline + canonical key order)
-    recipes      load_recipes / recipe_by_id / build_manifest (assets/recipes.json is the single source of truth)
+    recipes      load_recipes / recipe_by_id / build_manifest (assets/recipes.catalog is the single source of truth)
     checkver     detect_latest (github / url+regex / url+jsonpath+regex+replace)
     hashing      sha256_url / sha256_file
     lint        RULES / lint_manifest_text
@@ -121,7 +121,7 @@ CANONICAL_ORDER = [
     "autoupdate",
 ]
 
-ARCH_ORDER = ["64bit", "32bit", "arm64"]
+ARCH_ORDER = ["64bit", "arm64"]
 ARCH_MEMBER_ORDER = [
     "url",
     "hash",
@@ -151,9 +151,12 @@ CHECKVER_ORDER = [
 AUTOUPDATE_ORDER = ["architecture", "url", "hash", "extract_dir", "bin", "shortcuts"]
 
 # Architecture key -> parameter suffix. The 64bit slot keeps the historical
-# "url64" / "hash64" spelling; 32bit and arm64 use url32 / url_arm64.
-ARCH_PARAM = {"64bit": "url64", "32bit": "url32", "arm64": "url_arm64"}
-ARCH_HASH_PARAM = {"64bit": "hash64", "32bit": "hash32", "arm64": "hash_arm64"}
+# "url64" / "hash64" spelling; arm64 uses url_arm64 / hash_arm64.
+# 32bit is out of scope by decision, so "32bit" is rejected as an arch value
+# and url32 / hash32 are not generated. Upstream still carries such manifests
+# (596 files combine 32bit with another arch); this catalog does not emit them.
+ARCH_PARAM = {"64bit": "url64", "arm64": "url_arm64"}
+ARCH_HASH_PARAM = {"64bit": "hash64", "arm64": "hash_arm64"}
 
 # checkver keys Scoop resolves without any url (so no regex is required for them)
 CHECKVER_SELFCONTAINED = ("github", "sourceforge")
@@ -281,8 +284,17 @@ def write_manifest(path: Path, data: dict, preserve_order: bool = False) -> None
 # --------------------------------------------------------------------------
 
 
+# The catalog is data, not a Scoop manifest, so it deliberately avoids a .json
+# extension. This repo's CI runs Scoop's manifest gate (Import-Bucket-Tests.ps1)
+# over every *.json file changed by a commit, anywhere in the tree: the -Path
+# argument only locates the repository, it does not filter by sub-directory.
+# Anything named *.json is validated against Scoop's schema.json, which requires
+# version / homepage / license / url and forbids unknown top-level keys.
+CATALOG_NAME = "recipes.catalog"
+
+
 def load_recipes() -> dict:
-    path = assets_dir() / "recipes.json"
+    path = assets_dir() / CATALOG_NAME
     try:
         return json.loads(
             path.read_text(encoding="utf-8"), object_pairs_hook=OrderedDict
@@ -502,7 +514,7 @@ def _arch_urls(spec: dict, arches: list[str]) -> tuple[OrderedDict, OrderedDict]
     """Per-architecture url / hash, keyed by the arch name.
 
     The parameter names follow Scoop's historical spelling: 64bit keeps
-    `url64`, everything else is `url32` / `url_arm64`.
+    `url64`, arm64 is `url_arm64`.
     """
     urls: OrderedDict = OrderedDict()
     hashes: OrderedDict = OrderedDict()
@@ -883,7 +895,7 @@ def build_manifest(spec: dict) -> OrderedDict:
     raw_id = spec.get("recipe") or catalog.get("default_recipe")
     if not isinstance(raw_id, str):
         raise SmError(
-            "no recipe given: pass spec['recipe'], or set default_recipe in recipes.json"
+            f"no recipe given: pass spec['recipe'], or set default_recipe in {CATALOG_NAME}"
         )
     recipe_id = raw_id
     recipe = recipe_by_id(recipe_id)
