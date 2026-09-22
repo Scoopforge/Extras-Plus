@@ -91,6 +91,7 @@ scoop config aria2-min-split-size 4M
 |  [next-ai-drawio](https://next-ai-drawio.jiang.jp/)   |       ✓       |       |
 |     [notegen](https://github.com/codexu/note-gen)     |       ✓       |       |
 | [open-design](https://github.com/nexu-io/open-design) |       ✓       |       |
+|      [opencreator](https://www.open-creator.ai/)      |       ✓       |       |
 |     [vibe](https://github.com/thewh1teagle/vibe)      |       ✓       |       |
 |           [voicebox](https://voicebox.sh/)            |       ✓       |       |
 |        [voicestudio](https://voicestudio.sh/)         |       ✓       |       |
