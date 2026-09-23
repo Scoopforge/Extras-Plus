@@ -1,4 +1,4 @@
-"""Shared library for the extras-plus skill (Python standard library only).
+"""Shared library for the scoop-extras-plus skill (Python standard library only).
 
 Layers:
     paths        skill_root / assets_dir / scoop_bucket_root / find_repo_root / bucket_dir
@@ -27,7 +27,7 @@ from collections import OrderedDict
 from pathlib import Path
 from typing import Any
 
-USER_AGENT = "extras-plus-skill/1.0 (+https://github.com/Scoopforge/Extras-Plus)"
+USER_AGENT = "scoop-extras-plus/1.0 (+https://github.com/Scoopforge/Extras-Plus)"
 
 # --------------------------------------------------------------------------
 # 0. Exceptions and runtime

@@ -1,6 +1,6 @@
 ---
-name: extras-plus
-version: 1.5.0
+name: scoop-extras-plus
+version: 1.6.0
 description: >
   Generate, update and lint manifests for the extras-plus Scoop bucket
   (bucket/*.json). Three trigger commands: generate builds a skeleton from one of
@@ -11,14 +11,14 @@ description: >
   runs 22 rules against this repo's CI and .editorconfig conventions and repairs
   formatting with --fix-format. The write target is $env:Scoop/buckets/extras-plus.
   Triggers: generate manifest, new manifest, update manifest, lint manifest,
-  scoop manifest, extras-plus, bucket manifest, checkver, autoupdate, hash
+  scoop manifest, scoop-extras-plus, bucket manifest, checkver, autoupdate, hash
   verification, version bump, Excavator, Scoop bucket maintenance, lint bucket.
-display_name: "Extras Plus Manifest Forge"
+display_name: "Scoop Extras Plus Manifest Forge"
 visibility: "public"
 agent_created: true
 ---
 
-# Extras Plus Manifest Forge
+# Scoop Extras Plus Manifest Forge
 
 Turn "upstream shipped something new" or "upstream shipped a new version" into a
 single command. All three trigger commands -- **generate / update / lint** --
@@ -51,9 +51,10 @@ python scripts/scoop_manifest.py <command> [options]
 python scripts/sm_selftest.py
 ```
 
-Globally installed at `$env:USERPROFILE/.workbuddy/skills/extras-plus` -- a
-junction onto this repo's `skills/extras-plus`, so the repo stays the single
-source of truth. Every example below is relative to the package root.
+Globally installed at
+`$env:USERPROFILE/.workbuddy/skills/scoop-extras-plus`, a junction onto this
+repo's `skills/scoop-extras-plus`, so the repo stays the single source of truth.
+Every example below is relative to the package root.
 
 Managed interpreter on this machine:
 `$env:USERPROFILE/.workbuddy/binaries/python/versions/3.13.12/python.exe`.

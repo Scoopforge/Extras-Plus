@@ -1,4 +1,4 @@
-"""extras-plus skill self-check: offline, validates the skill package and the repo baseline.
+"""scoop-extras-plus skill self-check: offline, validates the package and repo baseline.
 
 python scripts/sm_selftest.py            # full self-check
 python scripts/sm_selftest.py --verbose  # print every detail
@@ -455,7 +455,7 @@ def check_docs(check: Checker) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        prog="sm_selftest.py", description="extras-plus skill self-check"
+        prog="sm_selftest.py", description="scoop-extras-plus skill self-check"
     )
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument(
@@ -464,7 +464,7 @@ def main() -> int:
     args = parser.parse_args()
 
     check = Checker(args.verbose)
-    print("extras-plus skill self-check")
+    print("scoop-extras-plus skill self-check")
     print(f"skill package: {L.skill_root()}")
 
     check_recipes(check)

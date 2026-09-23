@@ -1,4 +1,4 @@
-"""extras-plus skill CLI: three trigger commands -- generate / update / lint.
+"""scoop-extras-plus skill CLI: three trigger commands -- generate / update / lint.
 
     python scripts/scoop_manifest.py generate   # generate: build a manifest from a recipe and fill it in
     python scripts/scoop_manifest.py update     # update: edit fields / bump version / rehash / probe upstream
