@@ -12,7 +12,7 @@ and 10 the re-run recipe.
 
 ## 1. Method
 
-- Corpus: `C:\Scoop\buckets\extras\bucket` — the upstream
+- Corpus: `$env:Scoop/buckets/extras/bucket` — the upstream
   `ScoopInstaller/Extras` bucket, **2389** `*.json` manifests, against the 56 in
   this repo.
 - Offline and read-only: every file is `json.loads`-ed and tallied with

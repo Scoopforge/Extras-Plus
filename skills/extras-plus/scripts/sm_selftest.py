@@ -1,4 +1,4 @@
-"""scoop-manifest skill self-check: offline, validates the skill package and the repo baseline.
+"""extras-plus skill self-check: offline, validates the skill package and the repo baseline.
 
 python scripts/sm_selftest.py            # full self-check
 python scripts/sm_selftest.py --verbose  # print every detail
@@ -8,8 +8,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
+import tempfile
 from collections import OrderedDict
 from pathlib import Path
 
@@ -73,6 +75,11 @@ DUMMY = {
     "au_hash_regex": "$sha256\\s+$basename",
     "url_au": "https://example.com/app-$version.zip",
 }
+
+# A drive-letter path pointing at a Scoop root -- the very thing the package must
+# never contain, because the target is read from the environment at run time. The
+# lookbehind keeps a URL scheme ("https://...") from counting as a drive letter.
+HARDCODED_SCOOP_ROOT = re.compile(r"(?<![A-Za-z])[A-Za-z]:[\\/](?![\\/])[^\s]*[Ss]coop")
 
 
 class Checker:
@@ -162,8 +169,67 @@ def check_recipes(check: Checker) -> None:
     )
 
 
+def check_paths(check: Checker) -> None:
+    print("\n[2] bucket resolution ($env:Scoop, no hard-coded root)")
+    root = L.skill_root()
+    text_files = [
+        root / "SKILL.md",
+        root / "assets" / L.CATALOG_NAME,
+        *sorted((root / "references").glob("*.md")),
+        *sorted((root / "scripts").glob("*.py")),
+    ]
+    hard: list[str] = []
+    for path in text_files:
+        for match in HARDCODED_SCOOP_ROOT.finditer(path.read_text(encoding="utf-8")):
+            hard.append(f"{path.name}: {match.group(0)}")
+    check.expect(
+        not hard,
+        "no hard-coded Scoop root in the package ($env:Scoop is read at run time)",
+        "; ".join(hard) if hard else f"{len(text_files)} files scanned",
+    )
+
+    with tempfile.TemporaryDirectory() as tmp:
+        installed = Path(tmp) / L.BUCKETS_SUBDIR / L.BUCKET_NAME
+        (installed / "bucket").mkdir(parents=True)
+        (installed / "README.md").write_text("# stub\n", encoding="utf-8")
+        saved = os.environ.get(L.SCOOP_ENV_VAR)
+        os.environ[L.SCOOP_ENV_VAR] = tmp
+        try:
+            resolved = L.find_repo_root()
+            check.expect(
+                resolved == installed.resolve(),
+                "$env:Scoop/buckets/extras-plus is the default target",
+                str(resolved),
+            )
+            outside = root.parent.parent
+            if L.is_bucket_root(outside):
+                check.expect(
+                    L.find_repo_root(outside) == outside.resolve(),
+                    "--repo overrides the environment",
+                    str(outside),
+                )
+            else:
+                check.warn(
+                    "--repo override not exercised: the package is not inside a bucket repo",
+                    str(outside),
+                )
+            try:
+                L.find_repo_root(Path(tmp))
+                rejected = False
+            except L.SmError:
+                rejected = True
+            check.expect(
+                rejected, "--repo rejects a directory that is not a bucket root"
+            )
+        finally:
+            if saved is None:
+                os.environ.pop(L.SCOOP_ENV_VAR, None)
+            else:
+                os.environ[L.SCOOP_ENV_VAR] = saved
+
+
 def check_render(check: Checker) -> None:
-    print("\n[2] recipe rendering (offline, virtual parameters)")
+    print("\n[3] recipe rendering (offline, virtual parameters)")
     catalog = L.load_recipes()
     for recipe in catalog["recipes"]:
         spec = dict(DUMMY)
@@ -201,7 +267,7 @@ def check_render(check: Checker) -> None:
 def check_repo(check: Checker, repo: Path) -> None:
     bucket = L.bucket_dir(repo)
     files = sorted(bucket.glob("*.json"))
-    print(f"\n[3] repo round-trip consistency ({repo.name})")
+    print(f"\n[4] repo round-trip consistency ({repo.name})")
     if not files:
         check.fail("no manifests under bucket/")
         return
@@ -221,7 +287,7 @@ def check_repo(check: Checker, repo: Path) -> None:
     else:
         check.ok(f"{len(files)} manifests round-trip byte-identically")
 
-    print("\n[4] README summary table round-trip")
+    print("\n[5] README summary table round-trip")
     readme_path = repo / "README.md"
     if not readme_path.is_file():
         check.warn("no README.md at the repo root, skipping")
@@ -262,7 +328,7 @@ def check_repo(check: Checker, repo: Path) -> None:
 
 
 def check_lint_baseline(check: Checker, repo: Path) -> None:
-    print("\n[5] full lint baseline")
+    print("\n[6] full lint baseline")
     readme = (
         (repo / "README.md").read_text(encoding="utf-8")
         if (repo / "README.md").is_file()
@@ -295,7 +361,7 @@ def check_lint_baseline(check: Checker, repo: Path) -> None:
 
 
 def check_docs(check: Checker) -> None:
-    print("\n[6] docs <-> code consistency")
+    print("\n[7] docs <-> code consistency")
     refs = L.references_dir()
     catalog = L.load_recipes()
     recipe_ids = [r["id"] for r in catalog["recipes"]]
@@ -389,17 +455,20 @@ def check_docs(check: Checker) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        prog="sm_selftest.py", description="scoop-manifest skill self-check"
+        prog="sm_selftest.py", description="extras-plus skill self-check"
     )
     parser.add_argument("--verbose", action="store_true")
-    parser.add_argument("--repo")
+    parser.add_argument(
+        "--repo", help="bucket repo root (default: $env:Scoop/buckets/extras-plus)"
+    )
     args = parser.parse_args()
 
     check = Checker(args.verbose)
-    print("scoop-manifest skill self-check")
+    print("extras-plus skill self-check")
     print(f"skill package: {L.skill_root()}")
 
     check_recipes(check)
+    check_paths(check)
     check_render(check)
 
     try:

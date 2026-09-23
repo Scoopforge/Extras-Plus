@@ -1,37 +1,42 @@
 ---
-name: scoop-manifest
-version: 1.4.0
+name: extras-plus
+version: 1.5.0
 description: >
-  Generate, update and lint Scoop bucket app manifests (bucket/*.json). Three
-  trigger commands: generate builds a skeleton from one of 16 built-in recipes and
-  fills in version, URL, hash, checkver, autoupdate and shortcuts, optionally
-  syncing the README summary table; update edits fields by dotted path, bumps the
-  version while rewriting hard-coded URLs, recomputes hashes and probes upstream
-  for the latest release (batch sweep supported); lint runs 22 rules against this
-  repo's CI and .editorconfig conventions and repairs formatting with
-  --fix-format.
+  Generate, update and lint manifests for the extras-plus Scoop bucket
+  (bucket/*.json). Three trigger commands: generate builds a skeleton from one of
+  16 built-in recipes and fills in version, URL, hash, checkver, autoupdate and
+  shortcuts, optionally syncing the README summary table; update edits fields by
+  dotted path, bumps the version while rewriting hard-coded URLs, recomputes
+  hashes and probes upstream for the latest release (batch sweep supported); lint
+  runs 22 rules against this repo's CI and .editorconfig conventions and repairs
+  formatting with --fix-format. The write target is $env:Scoop/buckets/extras-plus.
   Triggers: generate manifest, new manifest, update manifest, lint manifest,
-  scoop manifest, bucket manifest, checkver, autoupdate, hash verification,
-  version bump, Excavator, Scoop bucket maintenance, lint bucket.
-display_name: "Scoop Manifest Forge"
+  scoop manifest, extras-plus, bucket manifest, checkver, autoupdate, hash
+  verification, version bump, Excavator, Scoop bucket maintenance, lint bucket.
+display_name: "Extras Plus Manifest Forge"
 visibility: "public"
 agent_created: true
 ---
 
-# Scoop Manifest Forge
+# Extras Plus Manifest Forge
 
 Turn "upstream shipped something new" or "upstream shipped a new version" into a
 single command. All three trigger commands -- **generate / update / lint** --
 share the recipe catalog and the rule engine. Python standard library only, and
 everything runs offline except `--checkver`, `--fetch-hash` and `--rehash`.
 
+**Target**: `$env:Scoop/buckets/extras-plus`, the copy of this bucket Scoop has
+installed. The path is read from the environment at run time and is never
+expanded in this package, so the globally installed skill works on any machine
+and from any cwd. `--repo <path>` overrides it.
+
 Package layout:
 
-- `scripts/sm_lib.py` shared layer: paths, serialization, the 15 builders,
-  checkver, rule engine, README table sync
+- `scripts/sm_lib.py` shared layer: paths (including the `$env:Scoop` lookup),
+  serialization, the 15 builders, checkver, rule engine, README table sync
 - `scripts/scoop_manifest.py` the three-command CLI
-- `scripts/sm_selftest.py` self-check: recipes <-> builders, docs <-> code,
-  repo round-trip, lint baseline
+- `scripts/sm_selftest.py` self-check: recipes <-> builders, bucket resolution,
+  docs <-> code, repo round-trip, lint baseline
 - `references/manifest-fields.md` manifest field reference (this repo's rules)
 - `references/recipes.md` when each of the 16 recipes applies, and what it emits
 - `references/lint-rules.md` the 22 rules and how to fix each one
@@ -46,14 +51,18 @@ python scripts/scoop_manifest.py <command> [options]
 python scripts/sm_selftest.py
 ```
 
+Globally installed at `$env:USERPROFILE/.workbuddy/skills/extras-plus` -- a
+junction onto this repo's `skills/extras-plus`, so the repo stays the single
+source of truth. Every example below is relative to the package root.
+
 Managed interpreter on this machine:
-`C:\Users\msain\.workbuddy\binaries\python\versions\3.13.12\python.exe`.
+`$env:USERPROFILE/.workbuddy/binaries/python/versions/3.13.12/python.exe`.
 
 ## 1. Hard constraints
 
-- **Output**: `<repo>/bucket/<app>.json`, optionally plus a README summary row.
-  Never write to `bin/`, `scripts/` or `.github/` -- those belong to Scoop's
-  official scripts and to this repo's CI.
+- **Output**: `$env:Scoop/buckets/extras-plus/bucket/<app>.json`, optionally plus
+  a README summary row in the same repo. Never write to `bin/`, `scripts/` or
+  `.github/` -- those belong to Scoop's official scripts and to this repo's CI.
 - **Preserve existing order**: `update` only slots **new** fields into their
   canonical position; existing fields keep their place. A full reorder needs an
   explicit `--reorder`.
@@ -81,8 +90,10 @@ Managed interpreter on this machine:
 | **update** | `upd` | Edit fields / bump version + rewrite URLs / recompute hashes / probe upstream | `--name`, `--all`, `--set`, `--unset`, `--version`, `--rehash`, `--checkver [--apply]` |
 | **lint** | `check` | Run the 22 rules, repair formatting | `--name`, `--json`, `--strict`, `--fix-format`, `--rules` |
 
-Shared option `--repo <bucket repo root>`: without it the script walks up from
-the cwd looking for a directory holding both `bucket/` and `README.md`.
+Shared option `--repo <bucket repo root>` overrides the target. Without it the
+script takes `$env:Scoop/buckets/extras-plus` whenever that is a bucket repo, and
+otherwise walks up from the cwd looking for a directory holding both `bucket/`
+and `README.md`.
 
 ## 3. generate
 
@@ -173,7 +184,8 @@ never JSON semantics.
 Exit code: error-level findings give 1; warnings alone give 0, or 1 with
 `--strict`. Rules and their fixes live in `references/lint-rules.md`.
 
-**Baseline (56 manifests)**: 0 errors, 27 warnings, 35 fully clean. Real issues
+**Baseline**: 0 error-level findings anywhere in the bucket. `lint` prints the
+live counts, because the bucket grows with every autoupdate commit. Real issues
 found so far:
 
 | manifest | Issue | Rule |
@@ -200,12 +212,14 @@ python scripts/sm_selftest.py            # full self-check (offline)
 python scripts/sm_selftest.py --verbose  # print every detail
 ```
 
-The self-check has 6 groups: recipe catalog shape -> recipe <-> builder coverage
-both ways -> virtual rendering of all 16 recipes -> repo serialization round-trip
--> README table round-trip and row-insert idempotence -> docs <-> code
-consistency (`lint-rules.md` matches `RULES` word for word, `recipes.md` maps
-one-to-one onto `recipes.jsonc`, and `SKILL.md`'s `name` equals the directory
-name).
+The self-check has 7 groups: recipe catalog shape and the no-`.json` guard ->
+bucket resolution (`$env:Scoop/buckets/extras-plus` is the default target,
+`--repo` overrides it, and no hard-coded Scoop root appears anywhere in the
+package) -> recipe <-> builder coverage both ways -> virtual rendering of all 16
+recipes -> repo serialization round-trip -> README table round-trip and row-insert
+idempotence -> docs <-> code consistency (`lint-rules.md` matches `RULES` word for
+word, `recipes.md` maps one-to-one onto `recipes.jsonc`, and `SKILL.md`'s `name`
+equals the directory name).
 
 **Adding a recipe** (4 steps, and the self-check catches omissions): add an entry
 to the `recipes` array in `recipes.jsonc` (`id` / `label` / `when` /
