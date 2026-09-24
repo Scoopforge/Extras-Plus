@@ -1,12 +1,12 @@
 {
-    "version": "0.19.2",
+    "version": "0.24.1",
     "description": "A free and open-source design tool",
     "homepage": "https://github.com/nexu-io/open-design",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v0.19.2/open-design-0.19.2-win-x64-setup.exe",
-            "hash": "dd3a78a5ed73b6d7da2e374e73a019470a00abce2f4f95896eb7b899c1dad756"
+            "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v0.24.1/open-design-0.24.1-win-x64-setup.exe",
+            "hash": "3a544dca7a5f078029d55f272e218278e52edac55efbfb292d56258113e8a441"
         }
     },
     "installer": {
@@ -25,7 +25,10 @@
             "Open Design"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/nexu-io/open-design/releases/latest",
+        "regex": "tag_name\"\\s*:\\s*\"open-design-v([\\d.]+)\""
+    },
     "autoupdate": {
         "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v$version/open-design-$version-win-x64-setup.exe"
     }
