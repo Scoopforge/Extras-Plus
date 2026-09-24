@@ -85,7 +85,7 @@ scoop config aria2-min-split-size 4M
 
 |                          App                          | Auto-Update ? | Note  |
 | :---------------------------------------------------: | :-----------: | :---: |
-|    [aionaui](https://github.com/iOfficeAI/AionUi)     |       ✓       |       |
+|     [aionui](https://github.com/iOfficeAI/AionUi)     |       ✓       |       |
 |           [buzz](https://buzzcaptions.com)            |               |       |
 |          [claude-desktop](https://claude.ai)          |       ✓       |       |
 |  [next-ai-drawio](https://next-ai-drawio.jiang.jp/)   |       ✓       |       |
@@ -95,6 +95,7 @@ scoop config aria2-min-split-size 4M
 |     [vibe](https://github.com/thewh1teagle/vibe)      |       ✓       |       |
 |           [voicebox](https://voicebox.sh/)            |       ✓       |       |
 |        [voicestudio](https://voicestudio.sh/)         |       ✓       |       |
+|       [wake](https://github.com/iAmCorey/Wake)        |       ✓       |       |
 
 ### General Use
 
@@ -103,10 +104,9 @@ scoop config aria2-min-split-size 4M
 |          [affinity](https://www.affinity.studio)           |       ✓       |              |
 |      [alexandria](https://github.com/btpf/Alexandria)      |       ✓       |              |
 | [alist-helper](https://github.com/Xmarmalade/alisthelper)  |       ✓       |              |
-|             [bananas](https://getbananas.net/)             |       ✓       |              |
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
 |                   [cap](https://cap.so)                    |       ✓       |              |
-|     [ecopast](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
+|    [ecopaste](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
 | [flying-carpet](https://github.com/spieglt/FlyingCarpet/)  |       ✓       |              |
 |          [kindle](https://amazon.com/kindleapps)           |       ✓       |              |
@@ -115,6 +115,7 @@ scoop config aria2-min-split-size 4M
 |                [mineru](https://mineru.net)                |       ✓       |              |
 |      [musicat](https://github.com/basharovV/musicat)       |       ✓       |              |
 |        [normcap](https://github.com/dynobo/normcap)        |       ✓       |              |
+|               [p2p-kiwi](https://p2p.kiwi/)                |       ✓       |              |
 |           [pastemd](https://pastemd.richqaq.cn)            |       ✓       |              |
 |           [pdf4qt](https://jakubmelka.github.io)           |       ✓       |              |
 |           [stirlingpdf](https://stirlingpdf.com)           |       ✓       |              |

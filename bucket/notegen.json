@@ -18,7 +18,8 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/codexu/note-gen/releases/latest",
-        "regex": "tag_name\"\\s*:\\s*\"note-gen-v([\\d.]+)\""
+        "jsonpath": "$.tag_name",
+        "regex": "note-gen-v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

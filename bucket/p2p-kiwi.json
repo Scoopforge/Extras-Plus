@@ -18,7 +18,7 @@
     "shortcuts": [
         [
             "p2p-kiwi.exe",
-            "bananas"
+            "p2p.kiwi"
         ]
     ],
     "checkver": {
