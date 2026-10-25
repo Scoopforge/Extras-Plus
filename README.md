@@ -105,6 +105,7 @@ scoop config aria2-min-split-size 4M
 |           [bitcomet](https://www.bitcomet.com/)            |       ✓       |              |
 |                   [cap](https://cap.so)                    |       ✓       |              |
 |    [ecopaste](https://github.com/EcoPasteHub/EcoPaste)     |       ✓       |              |
+|          [elyoffice](https://office.elygpui.com)           |       ✓       |              |
 | [filecentipede](https://github.com/filecxx/FileCentipede)  |       ✓       | by @CronusLM |
 | [flying-carpet](https://github.com/spieglt/FlyingCarpet/)  |       ✓       |              |
 |          [kindle](https://amazon.com/kindleapps)           |       ✓       |              |
