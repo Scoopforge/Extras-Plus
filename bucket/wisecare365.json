@@ -1,10 +1,10 @@
 {
-    "version": "8.0.7.735",
+    "version": "8.0.8.736",
     "description": "Free Windows PC Cleaner and Speed up Tool",
     "homepage": "https://wisecleaner.com/wise-care-365.html",
     "license": "Freeware",
-    "url": "https://downloads.wisecleaner.com/soft/WiseCare365_8.0.7.735.exe",
-    "hash": "2b616ce24f64ab12a5088a2c1d9e1e414ea22c37b37c75feee0469462e1c2133",
+    "url": "https://downloads.wisecleaner.com/soft/WiseCare365_8.0.8.736.exe",
+    "hash": "2ca2d0a0b864fba9bcac79e3f8e187dab6ccc090621ff03a5790f3942c38ff22",
     "innosetup": true,
     "installer": {
         "script": [
